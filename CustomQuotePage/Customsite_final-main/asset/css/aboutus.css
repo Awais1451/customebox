@@ -1,0 +1,189 @@
+:root {
+    --blue: #125dfc;
+  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif !important;
+}
+::selection {
+    background-color: #125dfc; 
+    color: #ffffff; 
+  }
+  a{
+    text-decoration: none !important;
+    box-shadow:  none !important;
+  }
+  /* h1{
+    font-size: 2rem !important;
+  } */
+.heroConatiner{
+    background-color: #F9FAFF;
+}
+.blue{
+    color: #125dfc !important;
+}
+.w-40{
+    width: 40% !important;
+}
+
+.heroText h1 span{
+    color: var(--blue);
+}
+.smallPara{
+    font-size: 13px;
+    font-weight:600 !important;
+    letter-spacing: 1.5px;
+}
+@media (min-width: 1400px) {
+  .wid {
+    width: 70% !important;
+  }
+}
+@media (max-width: 776px) {
+  .wid {
+    width: 100% !important;
+  }
+}
+.cardImg{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .3s ease ;
+}
+.cardTitle h3{
+    text-align: center;
+}
+.myCard:hover .cardImg{
+    background-color: #edf0fcc2 !important;
+    box-shadow: none !important;
+    transform: scale(.9);
+
+}
+.myCard:hover{
+    background-color: #ffffff !important;
+    box-shadow: rgba(100, 100, 111, 0.103) 0px 7px 29px 0px;
+    border-radius: 30px;
+}
+/* quality  */
+.quality{
+    background-color:#F5F7FA !important;
+}
+.qualityHeading h1{
+    width: 100%;
+    margin: auto;
+
+}
+
+/* ---  */
+
+.accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 30px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+  }
+  
+  .accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+  
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  }
+  /* Poppins  */
+  .poppinsPara{
+    font-size: 14px;
+  }
+  .featureBtn{
+    background-color: var(--blue) !important;
+    border-radius: 50px !important;
+    padding: 13px 10px !important;
+    width: 60%;
+  }
+  .featureBtn i{
+    transform: rotate(-45deg);
+    transition: .3s ease;
+  }
+  .featureBtn:hover i{
+    transform: rotate(0);
+  }
+  .featureBtn:hover{
+    background-color:#144cc4  !important;
+  }
+  .myCardPoppin{
+    background-color: #ffffffc2 !important;
+    box-shadow: none !important;
+    border-radius: 30px !important;
+    box-shadow: rgba(100, 100, 111, 0.103) 0px 7px 29px 0px !important;
+
+  }
+  .myCardPoppin:hover .cardImg{
+    transform: scale(.9);
+  }
+  .myCardPoppin .cardTitle h3{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .myCardPoppin{
+    height: 95% !important;
+  }
+
+
+
+  /* packing */
+  .packing{
+    margin-top: 6rem;
+  }
+  .packing-right{
+    width: 90%;
+  }
+  .packing-right span{
+    color: #8500fe;
+  }
+  .packing-right p{
+    font-size: 15px;
+  }
+
+
+
+  /* ====== cards ====*/
+  .cardddd{
+    border-radius: 50% !important;
+  }
+  .cardddd svg{
+    width: 65px !important;
+    height: 65px !important;
+  }
+.font-sz{
+  font-size: 14px !important;
+}
+  

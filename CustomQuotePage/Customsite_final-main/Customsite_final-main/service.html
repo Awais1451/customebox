@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom Box Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/mainhome.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- F-Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./asset/css/test.css" />
+
+    <!--###############> AOS Animation Style Start <#################  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!--###############> AOS Animation Style End  <#################  -->
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+      .captchaform {
+        position: relative;
+        margin: 20px auto;
+        width: 300px;
+      }
+
+      .submit__generated {
+        display: inline-block;
+      }
+
+      .submit__generated span {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        vertical-align: center;
+        line-height: 35px;
+        font-weight: bold;
+        font-size: 16px;
+        /* color: White; */
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid white;
+        border-radius: 4px;
+      }
+
+
+      .submit__generated.valid:after,
+      .submit__generated.unvalid:after {
+        font-family: FontAwesome;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+
+      .submit__generated.valid:after {
+        content: "\f00c";
+        color: #2ecc71;
+      }
+
+      .submit__generated.unvalid:after {
+        content: "\f00d";
+        color: #e74c3c;
+      }
+
+      .submit__generated.valid .submit__input {
+        border: 1px solid #2ecc71;
+        color: #2ecc71 !important;
+      }
+
+      .submit__generated.unvalid .submit__input {
+        border: 1px solid #e74c3c;
+        color: #e74c3c;
+      }
+
+      .submit__generated .submit__input {
+        position: relative;
+        outline: 0;
+        height: 35px;
+        width: 35px;
+        border-radius: 4px;
+        border: 1px solid #42a0dd;
+        color: #42a0dd;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        top: -2px;
+      }
+
+      .refreshcaptcha {
+        margin: 4px 0 0px 5px;
+        padding: 5px;
+        font-size: 18px;
+        color: White;
+        cursor: pointer;
+        transform-origin: center center;
+        transition: transform 0.2s ease-out, color 0.2s ease-out;
+      }
+      .refreshcaptcha:hover {
+        color: white;
+        transform: rotate(180deg);
+      }
+
+      .submit__error,
+      .submit__error--empty {
+        color: #e74c3c;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 100px;
+      }
+
+      .submit {
+        display: block;
+        margin: 50px 0;
+        padding: 7px 15px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        outline: none;
+        border: 0;
+        background-color: #42a0dd;
+        background-clip: padding-box;
+        border-radius: 3px;
+        box-shadow: 0 4px 0 #2c81ba;
+        opacity: 1;
+        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+      }
+
+      .submit:hover {
+        background-color: #3498db;
+      }
+
+      .submit:active,
+      .submit.enter-press,
+      .submit.overlay {
+        margin: 55px 0 46px 0;
+        box-shadow: none;
+      }
+
+      .submit__overlay {
+        height: 50px;
+        width: 110px;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        margin-top: -90px;
+        margin-left: -5px;
+      }
+
+      .low-opa {
+        opacity: 0.4;
+      }
+
+      .fadeOut {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      .fadeIn {
+        opacity: 1 !important;
+        transform: translateY(0px) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!--#################> Main Home Page Start<############# -->
+   <!-- ----------Navbar------------------------->
+   <div class="container py-2">
+    <div class="row p-0 m-0">
+      <div class="col-lg-3">
+        <a href class="logo d-none d-lg-block"
+          ><img src="./asset/img/logo.png" class="mb-2" alt width="150px"
+        /></a>
+      </div>
+      <div class="col-lg-6 p-0 m-0">
+        <div class="d-flex justify-content-around pt-2">
+          <div>
+            <a href class="text-decoration-none">
+              <i class="fa-regular fa-message"></i>
+              <span class="contact-txt ms-sm-2 text-nowrap"
+                >(510) 500-9533</span
+              >
+            </a>
+          </div>
+          <div>
+            <a href class="text-decoration-none">
+              <i class="fa-solid fa-phone ms-sm-3"></i>
+              <span class="contact-txt ms-sm-2 text-nowrap"
+                >sales@oxopackaging.com</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 pt-1 d-flex d-none d-lg-flex justify-content-end">
+        <button class="nav-btn">Login</button>
+        <button class="nav-btn2 ms-3">Signup</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="nav-bg">
+    <div class="container">
+      <div class="row p-0 m-0">
+        <nav class="navbar navbar-expand-lg nav-bg">
+          <div class="container d-flex justify-content-between">
+            <a href class="logo d-block d-lg-none"
+              ><img src="./asset/img/logo.png" class="mb-2" alt width="150px"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              <span class="navbar-toggler-icon toggle-clr"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse navv"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-3">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown me-3" id="BoxByIndus">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Boxes by Industry
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Something else here</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown me-3" id="BoxByStylematerail" >
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Boxes by Material
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Something else here</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li id="BoxByStyle" class="nav-item dropdown me-3">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Boxes by Style
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Something else here</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Request a Quote</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Blog</a>
+                </li>
+              </ul>
+              <div class="searchbar my-1">
+                <input
+                  class="search_input"
+                  type="text"
+                  name
+                  placeholder="Search Product"
+                />
+                <i class="fas fa-search search_icon"></i>
+              </div>
+
+              <div>
+                <div class="col-md-3 d-flex d-sm-block d-lg-none">
+                  <button class="nav-btn mb-3">Login</button>
+                  <button class="nav-btn2 ms-1">Signup</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+    
+  <div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+      <li class="nav-item me-3">
+        <a class="nav-link" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item dropdown me-3">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Boxes by Industry
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown me-3">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Boxes by Material
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown me-3">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Boxes by Style
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#">Request a Quote</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#">Blog</a>
+      </li>
+    </ul>
+    <div class="searchbar mb-3">
+      <input
+        class="search_input w-100"
+        type="text"
+        name
+        placeholder="Search Product"
+      />
+      <i class="fas fa-search search_icon"></i>
+    </div>
+
+    <div>
+      <div class="col-md-12 d-flex d-sm-block d-lg-none">
+        <button class="nav-btnoff mb-3 w-100">Login</button>
+        <button class="nav-btn2off">Signup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--################> OffCanva End<################# -->
+  <div class="container-fluid">
+
+  <!-- plain postal boxes section start ------------- -->
+  <section>
+    <div class="container-fluid px-lg-5 px-0">
+      <div class="row pt-4">
+        <nav aria-label="breadcrumb ">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a class="text-decoration-none" href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-decoration-none" href="#"
+                >Custom Printed Boxes</a
+              >
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a class="text-decoration-none" href="#"
+                >Custom corrugated Boxes</a
+              >
+            </li>
+          </ol>
+        </nav>
+        <div class="col-md-5 align-self-end">
+          <h1 class="text-center plain">Plain Postal boxes</h1>
+          <div class="">
+            <div class="shadOne">
+              <img
+                class="img-fluid imgOne"
+                src="./asset/img/blog_crd_2.jpg"
+                alt=""
+                id="main-Image"
+              />
+            </div>
+            <div class="d-flex mt-5 justify-content-between" id="swipImage">
+              <div class="mx-2 shadTwo">
+                <img
+                  class="img-fluid imgRound"
+                  src="./asset/img/blog_crd_2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="mx-2 shadTwo">
+                <img
+                  class="img-fluid imgRound"
+                  src="./asset/img/blog_crd_3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="mx-2 shadTwo">
+                <img
+                  class="img-fluid imgRound"
+                  src="./asset/img/blog_crd_2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="mx-2 shadTwo">
+                <img
+                  class="img-fluid imgRound"
+                  src="./asset/img/7xm.xyz169494.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="d-flex justify-content-center flex-column  mt-5 ">
+            <div
+              class="d-flex justify-content-center align-items-center flex-column"
+            >
+              <p class="d-flex justify-content-center oneDig">1</p>
+              <p class="text-center fw-bold fs-3">Design</p>
+            </div>
+            <div
+              class="d-flex justify-content-center align-items-center flex-column"
+            >
+              <p class="d-flex justify-content-center oneDig">2</p>
+              <p class="text-center fw-bold fs-3">Print</p>
+            </div>
+            <div
+              class="d-flex justify-content-center align-items-center flex-column"
+            >
+              <p class="d-flex justify-content-center oneDig bg-dark">3</p>
+              <p class="text-center fw-bold fs-3">get it done</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <form action="#">
+            <div class="formDiv mt-3">
+              <h1 class="bg-dark text-white text-center p-2 customHead">
+                Get Custom <span class="getSp">Quote</span>
+              </h1>
+              <div class="d-flex justify-content-around headSet align-items-center pt-4">
+                <div class="d-flex  ms-4 ms-lg-0">
+                  <i class="fa-solid fa-headset fs-2 mx-2 mt-2"></i>
+                  <p class="mb-0">
+                    <small>chat with</small> <br />
+                    Pakaging Expert
+                  </p>
+                </div>
+                <div class="d-flex ms-4 ms-lg-0">
+                  <i class="fa-brands fa-square-whatsapp whats fs-2 mt-1"></i>
+                  <p class="p-3 whatsPara mx-3 mb-0">Whatsapp us</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row mx-2">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Name*"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Email*"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Phone*"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <select
+                      class="form-select inputSHad"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Choose Stock</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Length(in)"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Width(in)"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Depth(in)"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mb-3">
+                    <select
+                      class="form-select inputSHad"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Choose Stock</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <select
+                      class="form-select inputSHad"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Choose Color</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <select
+                      class="form-select inputSHad"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Choose Color Surface</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Name*"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control inputSHad"
+                      id="exampleFormControlInput1"
+                      placeholder="Email*"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <textarea
+                      class="form-control inputSHad"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                      placeholder="Additional Requirement"
+                    ></textarea>
+                  </div>
+                </div>
+                <form action="" class="captchaform">
+                  <div class="col-md-3"></div>
+
+                  <div
+                    class="col-md-6 py-2 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-evenly text-center"
+                    style="border: 1px solid #f6f7fa"
+                  >
+                    <label class="submit__control">
+                      <div>
+                        <div class="submit__generated"></div>
+                        <!-- <i class="fa fa-refresh refreshcaptcha bg-dark"></i> -->
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="col-md-3"></div>
+                </form>
+
+                <div class="d-grid gap-2">
+                  <button class="btn btn-dark p-3 my-3" type="button">
+                    submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- plain postal boxes section end ------------- -->
+
+  <!--====== description Section  Start ======-->
+  <section id="gallery" class="px-2 px-md-5 galleryBg">
+    <div class="pt-3" style="transform: skewY(4deg) !important">
+      <div class="container-fluid p-3 px-md-4">
+        <!-- Filterable Gallery -->
+
+        <nav>
+          <div
+            class="nav nav-tabs navBorder navActive"
+            id="nav-tab"
+            role="tablist"
+          >
+            <a
+              class="nav-item nav-link active navBorder navActive"
+              id="nav-home-tab"
+              data-bs-toggle="tab"
+              href="#nav-home"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link navBorder"
+              id="nav-profile-tab"
+              data-bs-toggle="tab"
+              href="#nav-profile"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+              >Additional information</a
+            >
+            <a
+              class="nav-item nav-link navBorder"
+              id="nav-contact-tab"
+              data-bs-toggle="tab"
+              href="#nav-contact"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+              >Reviews(5)</a
+            >
+            <a
+              class="nav-item nav-link navBorder"
+              id="nav-contact-tab"
+              data-bs-toggle="tab"
+              href="#nav-contact"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+              >Vendor Info</a
+            >
+          </div>
+        </nav>
+
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active pt-3"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+          >
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade pt-3"
+            id="nav-profile"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+          >
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade pt-3"
+            id="nav-contact"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+          >
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade pt-3"
+            id="nav-contact"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+          >
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+            <p class="lineHeight">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laborum iusto assumenda tenetur ex itaque inventore quae amet,
+              odit animi eligendi harum esse reiciendis, iure maxime magni
+              quidem porro, veritatis iste? At doloremque inventore culpa
+              incidunt quasi, est voluptas nesciunt deserunt.
+            </p>
+          </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox">
+          <div class="lightbox_wrapper">
+            <div class="lightbox_content">
+              <img src class="lightbox_img" alt="lightbox-img" />
+            </div>
+          </div>
+          <div class="lightbox_close">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--====== description Section  End ======-->
+
+  <!-- ordering section start ---------------- -->
+  <section class="container-fluid px-lg-5 px-0">
+    <div class="py-4 giftBg">
+
+
+      <div class="row p-0 m-0">
+         
+        <div class="col-md-12 text-center  p-0 p-md-1">
+          <h1 class="mainhweading">
+            Ordering Custom <span class="giftClr">Gift Boxes</span> is Quick &
+            Easy here
+          </h1>
+          
+        </div>
+      
+      </div>
+    </div>
+      
+      <div class="row py-4">
+        <div class="col-lg-3 col-md-6 mt-3">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="mx-1">
+              <h1 class="oneHead"><i>1.</i></h1>
+            </div>
+            <div>
+              <h4>Specify Design</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+                odio?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-3">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="mx-1">
+              <h1 class="oneHead"><i>2.</i></h1>
+            </div>
+            <div>
+              <h4>Get Custom Quote</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+                odio?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-3">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="mx-1">
+              <h1 class="oneHead"><i>3.</i></h1>
+            </div>
+            <div>
+              <h4>Validate Design</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+                odio?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-3">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="mx-1">
+              <h1 class="oneHead"><i>4.</i></h1>
+            </div>
+            <div>
+              <h4>Place Order</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+                odio?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ordering section end ---------------- -->
+
+  <!-- gallery section start --------------- -->
+  <section>
+    <div class="container-fluid px-lg-5 px-0 pt-5">
+      <nav>
+        <div class="nav nav-tabs navDes" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link navlinkDes"
+            id="tab1-tab"
+            data-bs-toggle="tab"
+            href="#tab1"
+            role="tab"
+            aria-controls="tab1"
+            aria-selected="true"
+            >Coating & Lamination</a
+          >
+          <a
+            class="nav-item nav-link navlinkDes"
+            id="tab2-tab"
+            data-bs-toggle="tab"
+            href="#tab2"
+            role="tab"
+            aria-controls="tab2"
+            aria-selected="false"
+            >Printing Options</a
+          >
+          <a
+            class="nav-item nav-link navlinkDes"
+            id="tab3-tab"
+            data-bs-toggle="tab"
+            href="#tab3"
+            role="tab"
+            aria-controls="tab3"
+            aria-selected="false"
+            >Special Finishes
+          </a>
+          <a
+            class="nav-item nav-link navlinkDes"
+            id="tab4-tab"
+            data-bs-toggle="tab"
+            href="#tab4"
+            role="tab"
+            aria-controls="tab4"
+            aria-selected="false"
+            >Paperboard
+          </a>
+          <a
+            class="nav-item nav-link navlinkDes"
+            id="tab5-tab"
+            data-bs-toggle="tab"
+            href="#tab5"
+            role="tab"
+            aria-controls="tab5"
+            aria-selected="false"
+            >Corrugated</a
+          >
+          <a
+            class="nav-item nav-link navlinkDes"
+            id="tab6-tab"
+            data-bs-toggle="tab"
+            href="#tab6"
+            role="tab"
+            aria-controls="tab6"
+            aria-selected="false"
+            >Fluted Grades</a
+          >
+          <a
+            class="nav-item nav-link navlinkDes"
+            id="tab7-tab"
+            data-bs-toggle="tab"
+            href="#tab7"
+            role="tab"
+            aria-controls="tab7"
+            aria-selected="false"
+            >Rigid Materials</a
+          >
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active pt-4"
+          id="tab1"
+          role="tabpanel"
+          aria-labelledby="tab1-tab"
+        >
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Digital Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Offset Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Oil Based links</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 col-md-4 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade pt-4"
+          id="tab2"
+          role="tabpanel"
+          aria-labelledby="tab2-tab"
+        >
+          <div class="row">
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Oil Based links</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade pt-4"
+          id="tab3"
+          role="tabpanel"
+          aria-labelledby="tab3-tab"
+        >
+          <div class="row">
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Digital Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Offset Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Oil Based links</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade pt-4"
+          id="tab4"
+          role="tabpanel"
+          aria-labelledby="tab4-tab"
+        >
+          <div class="row">
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Digital Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Offset Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Oil Based links</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade pt-4"
+          id="tab5"
+          role="tabpanel"
+          aria-labelledby="tab5-tab"
+        >
+          <div class="row">
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Digital Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Offset Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Oil Based links</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade pt-4"
+          id="tab6"
+          role="tabpanel"
+          aria-labelledby="tab6-tab"
+        >
+          <div class="row">
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Digital Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Offset Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Oil Based links</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade pt-4"
+          id="tab7"
+          role="tabpanel"
+          aria-labelledby="tab7-tab"
+        >
+          <div class="row">
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Digital Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Offset Printing</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Oil Based links</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="card cardHeight">
+                <img
+                  src="./asset/img/selling.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold my-3">Pantone colors</h5>
+                  <p class="card-text cardP">
+                    Some quick example text to build on the card title and
+                    make up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- gallery section end --------------- -->
+</div>
+
+  <!--################> Discuss project Start <###########  -->
+  <section class="my-5 discussBg">
+    <div class="container">
+      <div
+        class="d-flex justify-content-center align-items-center flex-column py-5"
+      >
+        <h1 class="discusHeading text-center">
+          DISCUSS YOUR PROJECT <br />
+          <span class="withSpan">WITH US TODAY</span>
+        </h1>
+        <p class="textFont">
+          Give us a call at <b>1-800-2095-992</b>(8am to 5pm) Mon-Fri EST.
+        </p>
+        <button type="button" class="btn inquiryBtn px-5 py-2">
+          Send an Inquiry
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!--################> Discuss project End <#############  -->
+
+  <section class="productBg">
+    <!-- ------------------------------Section3----------------------------- -->
+
+    <div class="text-center settingmain pb-5">
+      <div class="row p-0 m-0 p-0 m-0">
+        <div class="col-md-4 p-0 m-0"></div>
+        <div class="col-md-4 p-0 m-0">
+          <h1 class="mainhweadingtwo pt-3"><span>Related</span> Products</h1>
+        </div>
+        <div class="col-md-4 p-0 m-0"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid pb-5">
+      <div class="row p-0 m-0 px-md-3 p-0 p-md-1">
+        <div class="col-12 col-sm-6 col-lg-3 p-0 p-md-1">
+          <div class="card Card-FB mb-3">
+            <div class="img-wrapperinersecond reImage">
+              <button class="px-2">Personalize Postal Boxes</button>
+              <img class="inner-imgone" src="./asset/img/blog_crd_1.jpg" />
+            </div>
+            <a href class="text-decoration-none roundOffAnchor">
+              <div class="ms-2 roundOff">
+                <span class="spa_mrch_txt"> 5% OFF</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 p-0 p-md-1">
+          <div class="card Card-FB mb-3">
+            <div class="img-wrapperinersecond reImage">
+              <button class="px-2">Personalize Postal Boxes</button>
+              <img class="inner-imgone" src="./asset/img/blog_crd_1.jpg" />
+            </div>
+            <a href class="text-decoration-none roundOffAnchor">
+              <div class="ms-2 roundOff">
+                <span class="spa_mrch_txt"> 5% OFF</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 p-0 p-md-1">
+          <div class="card Card-FB mb-3">
+            <div class="img-wrapperinersecond reImage">
+              <button class="px-2">Personalize Postal Boxes</button>
+              <img class="inner-imgone" src="./asset/img/blog_crd_3.jpg" />
+            </div>
+            <a href class="text-decoration-none roundOffAnchor">
+              <div class="ms-2 roundOff">
+                <span class="spa_mrch_txt"> 5% OFF</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 p-0 p-md-1 position-relative"
+        >
+          <div class="img-wrapperinersecond reImage w95">
+            <button class="px-2">Personalize Postal Boxes</button>
+            <img class="inner-imgone" src="./asset/img/blog_crd_2.jpg" />
+          </div>
+          <a href class="text-decoration-none roundOffAnchor">
+            <div class="ms-2 roundOff">
+              <span class="spa_mrch_txt"> 5% OFF</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--#################> Footer Start <############### -->
+  <section class="position-relative">
+    <!-- footerTop starts  -->
+    <div class="container footerTop px-2 px-md-4 py-3 row">
+      <div
+        class="location d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+      >
+        <div
+          class="locationIcon d-flex justify-content-center align-items-center"
+        >
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="locationText mt-1 ms-3">
+          <span class="text-uppercase">Our Location</span>
+          <br />
+          <small>90 State Street, Albany</small>
+        </div>
+      </div>
+
+      <div
+        class="call d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+      >
+        <div
+          class="callIcon d-flex justify-content-center align-items-center mt-1"
+        >
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="callText mt-1 ms-3">
+          <span class="text-uppercase">Call Us</span> <br />
+          <small>315 210 8020</small>
+        </div>
+      </div>
+
+      <div
+        class="whatsapp d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+      >
+        <div
+          class="whatsappIcon d-flex justify-content-center align-items-center mt-1"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="whatsappText mt-1 ms-3">
+          <span class="text-uppercase">whatsapp</span> <br />
+          <small>716 815 6064 </small>
+        </div>
+      </div>
+      <div
+        class="email d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+      >
+        <div
+          class="emailIcon d-flex justify-content-center align-items-center"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="emailText mt-1 ms-3">
+          <span class="text-uppercase">email us</span> <br />
+          <small>sales@ibexpackaging.com </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- footerTop ends  -->
+
+    <!-- footer starts  -->
+    <footer class="footer mt-5 container-fluid">
+      <div class="footerContent row mx-md-2 d-flex flex-wrap">
+        <!-- Footer Info -->
+        <div
+          class="footerInfo col-12 col-md-6 col-lg-3 d-flex flex-column gap-4 mb-4 align-items-start"
+        >
+          <div class="footerInfoLogo">
+            <img src="./asset/img/Logo.svg" alt="Logo" />
+          </div>
+          <div class="footerInfoText">
+            <p class="ftext text-start text-md-start">
+              Distrusts delighted Excuse few the remain highly feebly add
+              people manner say. It high at my mind by roof.
+            </p>
+          </div>
+          <div class="footerInfoSmlinks d-flex gap-2">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-twitter mt-1"></i></div>
+            <div><i class="fa-brands fa-instagram mt-1"></i></div>
+            <div><i class="fa-brands fa-pinterest mt-1"></i></div>
+          </div>
+        </div>
+
+        <!-- Footer Contact -->
+        <div
+          class="footerContact col-12 col-md-6 col-lg-3 justify-content-center align-items-start d-flex mb3 flex-column"
+        >
+          <h5 class="text-capitalize mb-4">get in touch</h5>
+          <p class="ftext m-0 lh-lg text-start">
+            2972 Westheimer Rd. Santa Ana, Illinois 85486 <br />
+            support@example.com
+          </p>
+          <br />
+          <h5 class="fw500 ftext cn">+ (406) 555-0120</h5>
+        </div>
+
+        <!-- Footer Links -->
+        <div
+          class="footerLinks col-12 col-md-12 col-lg-6 m-0 d-flex justify-content-between pe-5 flex-column flex-md-row align-items-start mt-4"
+        >
+          <div class="Info">
+            <h5 class="text-capitalize mb-4">information</h5>
+            <ul class="lh-lg">
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Help center</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">shipping</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">returns</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">policies</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">gift cards</a>
+              </li>
+            </ul>
+          </div>
+          <div class="Usefull">
+            <h5 class="text-capitalize mb-4">Useful links</h5>
+            <ul class="lh-lg">
+              <li class="text-capitalize">
+                <a class="fw500" href="#">My Account</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Order Tracking</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">All Products</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">All Services</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Service Detail</a>
+              </li>
+            </ul>
+          </div>
+          <div class="About">
+            <h5 class="text-capitalize mb-4">About us</h5>
+            <ul class="lh-lg">
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Our story</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Contacts</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Affiliate Program</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Referral Program</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">careers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footerbottom">
+        <p class="pt-2">CopyWrite @2023.Allright Reserved</p>
+      </div>
+    </footer>
+    <!-- footer ends  -->
+  </section>
+  <!--#################> Footer End <############### -->
+
+
+    <script src="./asset/js/swiper-bundle.min.js"></script>
+    <script src="./asset/js/script.js"></script>
+    <script src="./asset/js/gallary.js"></script>
+
+    <script>
+      const accordionItemHeaders = document.querySelectorAll(
+        ".accordion-item-header"
+      );
+
+      accordionItemHeaders.forEach((accordionItemHeader) => {
+        accordionItemHeader.addEventListener("click", (event) => {
+          // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+
+          const currentlyActiveAccordionItemHeader = document.querySelector(
+            ".accordion-item-header.active"
+          );
+          if (
+            currentlyActiveAccordionItemHeader &&
+            currentlyActiveAccordionItemHeader !== accordionItemHeader
+          ) {
+            currentlyActiveAccordionItemHeader.classList.toggle("active");
+            currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+          }
+          accordionItemHeader.classList.toggle("active");
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight =
+              accordionItemBody.scrollHeight + "px";
+          } else {
+            accordionItemBody.style.maxHeight = 0;
+          }
+        });
+      });
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--###############> AOS Animatoion End<###############  -->
+
+    <!-- <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+    <script>
+      var a,
+        b,
+        c,
+        submitContent,
+        captcha,
+        locked,
+        validSubmit = false,
+        timeoutHandle;
+
+      // Generating a simple sum (a + b) to make with a result (c)
+      function generateCaptcha() {
+        a = Math.ceil(Math.random() * 10);
+        b = Math.ceil(Math.random() * 10);
+        c = a + b;
+        submitContent =
+          "<span>" +
+          a +
+          "</span> + <span>" +
+          b +
+          "</span>" +
+          ' = <input class="submit__input" type="text" maxlength="2" size="2" required />';
+        $(".submit__generated").html(submitContent);
+
+        init();
+      }
+
+      // Check the value 'c' and the input value.
+      function checkCaptcha() {
+        if (captcha === c) {
+          // Pop the green valid icon
+          $(".submit__generated").removeClass("unvalid").addClass("valid");
+          $(".submit").removeClass("overlay");
+          $(".submit__overlay").fadeOut("fast");
+
+          validSubmit = true;
+        } else {
+          // Pop the red unvalid icon
+          $(".submit__generated").removeClass("valid").addClass("unvalid");
+          $(".submit").addClass("overlay");
+          $(".submit__overlay").fadeIn("fast");
+          validSubmit = false;
+        }
+        return validSubmit;
+      }
+
+      function unlock() {
+        locked = false;
+      }
+
+      // Refresh button click - Reset the captcha
+      $(".submit__control i.fa-refresh").on("click", function () {
+        if (!locked) {
+          locked = true;
+          setTimeout(unlock, 500);
+          generateCaptcha();
+          setTimeout(checkCaptcha, 0);
+        }
+      });
+
+      // init the action handlers - mostly useful when 'c' is refreshed
+      function init() {
+        $(".captchaform").on("submit", function (e) {
+          e.preventDefault();
+          if ($(".submit__generated").hasClass("valid")) {
+            // var formValues = [];
+            captcha = $(".submit__input").val();
+            if (captcha !== "") {
+              captcha = Number(captcha);
+            }
+
+            checkCaptcha();
+
+            if (validSubmit === true) {
+              validSubmit = false;
+              // Temporary direct 'success' simulation
+              submitted();
+            }
+          } else {
+            return false;
+          }
+        });
+
+        // Captcha input result handler
+        $(".submit__input").on(
+          "propertychange change keyup input paste",
+          function () {
+            // Prevent the execution on the first number of the string if it's a 'multiple number string'
+            // (i.e: execution on the '1' of '12')
+            window.clearTimeout(timeoutHandle);
+            timeoutHandle = window.setTimeout(function () {
+              captcha = $(".submit__input").val();
+              if (captcha !== "") {
+                captcha = Number(captcha);
+              }
+              checkCaptcha();
+            }, 150);
+          }
+        );
+
+        // Add the ':active' state CSS when 'enter' is pressed
+
+        // Refresh button click - Reset the captcha
+        $(".submit-control i.fa-refresh").on("click", function () {
+          if (!locked) {
+            locked = true;
+            setTimeout(unlock, 500);
+            generateCaptcha();
+            setTimeout(checkCaptcha, 0);
+          }
+        });
+
+        // Submit white overlay click
+        $(".submit-form-overlay").on("click", function () {
+          checkCaptcha();
+        });
+      }
+
+      generateCaptcha();
+    </script>
+    <script>
+      let mainImage = document.getElementById("main-Image");
+      let swipImage = document.querySelectorAll(".shadTwo");
+
+      swipImage.forEach((ele) => {
+        ele.onclick = () => {
+          console.log(ele.querySelector("img").src);
+          mainImage.src = ele.querySelector("img").src;
+        };
+      });
+    </script>
+  </body>
+</html>

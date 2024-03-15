@@ -1,0 +1,2879 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom Box Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/mainhome.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- F-Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./asset/css/test.css" />
+
+    <!--###############> AOS Animation Style Start <#################  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!--###############> AOS Animation Style End  <#################  -->
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+      .captchaform {
+        position: relative;
+        margin: 20px auto;
+        width: 300px;
+      }
+
+      .submit__generated {
+        display: inline-block;
+      }
+
+      .submit__generated span {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        vertical-align: center;
+        line-height: 35px;
+        font-weight: bold;
+        font-size: 16px;
+        color: White;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid white;
+        border-radius: 4px;
+      }
+
+      .submit__generated.valid:after,
+      .submit__generated.unvalid:after {
+        font-family: FontAwesome;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+
+      .submit__generated.valid:after {
+        content: "\f00c";
+        color: #2ecc71;
+      }
+
+      .submit__generated.unvalid:after {
+        content: "\f00d";
+        color: #e74c3c;
+      }
+
+      .submit__generated.valid .submit__input {
+        border: 1px solid #2ecc71;
+        color: #2ecc71 !important;
+      }
+
+      .submit__generated.unvalid .submit__input {
+        border: 1px solid #e74c3c;
+        color: #e74c3c;
+      }
+
+      .submit__generated .submit__input {
+        position: relative;
+        outline: 0;
+        height: 35px;
+        width: 35px;
+        border-radius: 4px;
+        border: 1px solid #42a0dd;
+        color: #42a0dd;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        top: -2px;
+      }
+
+      .refreshcaptcha {
+        margin: 4px 0 0px 5px;
+        padding: 5px;
+        font-size: 18px;
+        color: White;
+        cursor: pointer;
+        transform-origin: center center;
+        transition: transform 0.2s ease-out, color 0.2s ease-out;
+      }
+      .refreshcaptcha:hover {
+        color: white;
+        transform: rotate(180deg);
+      }
+
+      .submit__error,
+      .submit__error--empty {
+        color: #e74c3c;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 100px;
+      }
+
+      .submit {
+        display: block;
+        margin: 50px 0;
+        padding: 7px 15px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        outline: none;
+        border: 0;
+        background-color: #42a0dd;
+        background-clip: padding-box;
+        border-radius: 3px;
+        box-shadow: 0 4px 0 #2c81ba;
+        opacity: 1;
+        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+      }
+
+      .submit:hover {
+        background-color: #3498db;
+      }
+
+      .submit:active,
+      .submit.enter-press,
+      .submit.overlay {
+        margin: 55px 0 46px 0;
+        box-shadow: none;
+      }
+
+      .submit__overlay {
+        height: 50px;
+        width: 110px;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        margin-top: -90px;
+        margin-left: -5px;
+      }
+
+      .low-opa {
+        opacity: 0.4;
+      }
+
+      .fadeOut {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      .fadeIn {
+        opacity: 1 !important;
+        transform: translateY(0px) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!--#################> Main Home Page Start<############# -->
+
+   
+    <!-- ----------Navbar------------------------->
+    <div class="container py-2">
+      <div class="row p-0 m-0">
+        <div class="col-lg-3">
+          <a href class="logo d-none d-lg-block"
+            ><img src="./asset/img/logo.png" class="mb-2" alt width="150px"
+          /></a>
+        </div>
+        <div class="col-lg-6 p-0 m-0">
+          <div class="d-flex justify-content-around pt-2">
+            <div>
+              <a href class="text-decoration-none">
+                <i class="fa-regular fa-message"></i>
+                <span class="contact-txt ms-sm-2 text-nowrap"
+                  >(510) 500-9533</span
+                >
+              </a>
+            </div>
+            <div>
+              <a href class="text-decoration-none">
+                <i class="fa-solid fa-phone ms-sm-3"></i>
+                <span class="contact-txt ms-sm-2 text-nowrap"
+                  >sales@oxopackaging.com</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 pt-1 d-flex d-none d-lg-flex justify-content-end">
+          <button class="nav-btn">Login</button>
+          <button class="nav-btn2 ms-3">Signup</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="nav-bg">
+      <div class="container">
+        <div class="row p-0 m-0">
+          <nav class="navbar navbar-expand-lg nav-bg">
+            <div class="container d-flex justify-content-between">
+              <a href class="logo d-block d-lg-none"
+                ><img src="./asset/img/logo.png" class="mb-2" alt width="150px"
+              /></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <span class="navbar-toggler-icon toggle-clr"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse navv"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+                  <li class="nav-item me-3">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown me-3" id="BoxByIndus">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Boxes by Industry
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown me-3" id="BoxByStylematerail" >
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Boxes by Material
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="BoxByStyle" class="nav-item dropdown me-3">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Boxes by Style
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Request a Quote</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Blog</a>
+                  </li>
+                </ul>
+                <div class="searchbar my-1">
+                  <input
+                    class="search_input"
+                    type="text"
+                    name
+                    placeholder="Search Product"
+                  />
+                  <i class="fas fa-search search_icon"></i>
+                </div>
+
+                <div>
+                  <div class="col-md-3 d-flex d-sm-block d-lg-none">
+                    <button class="nav-btn mb-3">Login</button>
+                    <button class="nav-btn2 ms-1">Signup</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+      
+    <div
+    class="offcanvas offcanvas-start"
+    tabindex="-1"
+    id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button
+        type="button"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+        <li class="nav-item me-3">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Boxes by Industry
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown me-3">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Boxes by Material
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Boxes by Style
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Request a Quote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Blog</a>
+        </li>
+      </ul>
+      <div class="searchbar mb-3">
+        <input
+          class="search_input w-100"
+          type="text"
+          name
+          placeholder="Search Product"
+        />
+        <i class="fas fa-search search_icon"></i>
+      </div>
+
+      <div>
+        <div class="col-md-12 d-flex d-sm-block d-lg-none">
+          <button class="nav-btnoff mb-3 w-100">Login</button>
+          <button class="nav-btn2off">Signup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--################> OffCanva End<################# -->
+
+    <div class="maincustoomhome">
+      <!--###############> Crousel Start <################# -->
+
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active slider-img">
+            <section class="bg-banner">
+              <div class="container">
+                <div class="row p-0 m-0 p-3">
+                  <div class="col-lg-5 col-md-6">
+                    <div class="Left-col">
+                      <p class="para-txt text-white pt-5 pt-6">CUSTOM BOXES</p>
+                      <p class="CS-TXT text-capitalize">
+                        Customized bulk paper bags
+                      </p>
+                      <p class="para-txt text-capitalize">
+                        Turn your ideas into premium products that leave a
+                        lasting impression
+                      </p>
+                      <div class>
+                        <button class="btn btn-lg sec2_custom-button mt-2">
+                          Shop Now<i
+                            class="fa-solid fa-arrow-right sec2_custom_icon ms-1"
+                          ></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-7 col-md-6 d-none d-md-block animatedingbox"
+                  >
+                    <img
+                      src="./asset/img/image_11-removebg-preview 1.png"
+                      class="pt-5 w-100"
+                      alt
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="carousel-item pb-5 pb-md-0">
+            <div class="slider-img secondcarousel">
+              <img
+                src="./asset/img/7xm.xyz169494.jpg"
+                class="d-block w-100 img-slid"
+                alt="..."
+              />
+            </div>
+            <div class="custom-carousel-caption">
+              <p class="fst-italic">Custom Boxes</p>
+              <h3 class="CS-TXT mb-5 ms-4">Customized bulk paper bags</h3>
+              <div class="row p-0 m-0">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">
+                  <button
+                    class="btn w-100 btn-lg sec2_custom-button1 mt-2 px-5 py-3 text-nowrap"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+                <div class="col-lg-5">
+                  <button
+                    class="btn w-100 btn-lg sec2_custom-button2 mt-2 px-5 py-3 text-nowrap"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+                <div class="col-lg-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class aria-hidden="true"></span>
+          <!-- <span class="visually-hidden">Previous</span> -->
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!--###############> Crousel End <################# -->
+
+      <section class="bg-transparent masterlightsection">
+        <div class="container">
+          <div class="row p-0 m-0">
+            <div class="col-md-4 mb-3 mb-md-0 p-0 p-md-1">
+              <div class="bg-white boxeshome">
+                <div class="d-flex p-3 mb-md-0 mb-5">
+                  <div>
+                    <img src="./asset/img/Group 14.png" alt width="54px" />
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-0 banner-para">Free Shipping & Return</p>
+                    <p class="mb-0">Free Shipping on orders over $199</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0 p-0 p-md-1">
+              <div class="bg-white boxeshome">
+                <div class="d-flex p-3 mb-md-0 mb-5">
+                  <div>
+                    <img src="./asset/img/Group 14.png" alt width="54px" />
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-0 banner-para">Free Shipping & Return</p>
+                    <p class="mb-0">Free Shipping on orders over $199</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0 p-0 p-md-1">
+              <div class="bg-white boxeshome">
+                <div class="d-flex p-3">
+                  <div>
+                    <img src="./asset/img/Group 14.png" alt width="54px" />
+                  </div>
+                  <div class="ms-3">
+                    <p class="mb-0 banner-para">Free Shipping & Return</p>
+                    <p class="mb-0">Free Shipping on orders over $199</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--#################> Main Home Page End<############# -->
+
+    <section class="py-5 mt-5 topsellingitemsection">
+      <div
+        class="container-fluid px-md-5"
+        style="transform: skewY(4deg) !important"
+      >
+        <div class="text-center settingmain">
+          <div class="row p-0 m-0">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 p-0 p-md-1">
+              <h1 class="mainhweading"><span>Top selling</span> items</h1>
+              <p class="pt-3">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered
+              </p>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+        <div class="row p-0 m-0 ">
+          <div class="col-md-6 mt-3 mt-lg-0 order-2 order-lg-0">
+            <div class="img-wrapper">
+              <button class="px-5">Packaging</button>
+              <img class="inner-img" src="./asset/img/selling.png" />
+            </div>
+          </div>
+          <div class="col-lg-6 p-0 m-0">
+            <div class="row p-0 m-0">
+              <div class="col-md-6 mt-3 mt-lg-0 py-md-0 px-2">
+                <div class="img-wrapperiner">
+                  <button class="px-5">Packaging</button>
+                  <img class="inner-img" src="./asset/img/selling2.png" />
+                </div>
+              </div>
+
+              <div class="col-md-6 mt-3 mt-lg-0 py-md-0 px-2">
+                <div class="img-wrapperiner">
+                  <button class="px-5">Packaging</button>
+                  <img class="inner-img" src="./asset/img/selling3.png" />
+                </div>
+              </div>
+
+              <div class="col-md-6 mt-5 mt-lg-4 py-md-0 px-2">
+                <div class="img-wrapperiner">
+                  <button class="px-5">Packaging</button>
+                  <img class="inner-img" src="./asset/img/selling6.png" />
+                </div>
+              </div>
+
+              <div class="col-md-6 mt-5 mt-lg-4 py-md-0 px-2">
+                <div class="img-wrapperiner">
+                  <button class="px-5">Packaging</button>
+                  <img class="inner-img" src="./asset/img/selling5.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 px-md-5">
+      <div class="container-fluid">
+        <div class="text-center settingmain">
+          <div class="row p-0 m-0">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <h1 class="mainhweading"><span>Top selling</span> items</h1>
+              <p class="pt-3">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered
+              </p>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+
+        <div class="row p-0 m-0 py-md-5">
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 p-0 p-md-2">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling7.png" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 p-0 p-md-2">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling8.png" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 p-0 p-md-2">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling9.png" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 p-0 p-md-2">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/textbanner1.jpg" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mt-lg-0 p-0 p-md-2">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling5.png" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mt-lg-0 p-0 p-md-2">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling3.png" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mt-lg-0 p-0 p-md-2">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling4.png" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 p-md-2 mt-3 mt-lg-0">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/textbanner1.jpg" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 p-md-2 mt-3 mt-lg-0">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/textbanner1.jpg" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 p-md-2 mt-3 mt-lg-0">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling7.png" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 p-md-2 mt-3 mt-lg-0">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling8.png" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 p-0 p-md-2 mt-3 mt-lg-0">
+            <div class="img-wrapperinersecond">
+              <button class="px-5">Packaging</button>
+              <img class="inner-imgone" src="./asset/img/selling9.png" />
+            </div>
+          </div>
+
+          <div class="col-12 py-4 d-flex justify-content-center">
+            <button
+              type="button"
+              class="btn rounded-0 btn-lg btn-block readmorebtn1 px-5"
+            >
+              Read More <i class="fas fa-arrow-right allroset"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--################> Get A Qouet Start <############## -->
+    <section>
+      <div class="text-center settingmain">
+        <div class="row p-0 m-0 p-0 m-0">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <h1 class="mainhweading"><span>Get A Free</span> Quote</h1>
+            <p class="pt-3">There are many variations of passages of Lorem</p>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+      <div class="mainnewqoute">
+        <div class="container pb-3">
+          <form>
+            <div class="row p-0 m-0 newqoute">
+              <div class="col-md-6 p-0 p-md-1">
+                <div class="form-row row rowPad">
+                  <div class="form-group col-sm-6 mt-3">
+                    <label for="inputEmail4">Name</label>
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="inputEmail4"
+                    />
+                  </div>
+                  <div class="form-group col-sm-6 mt-3">
+                    <label for="inputPassword4">Phone</label>
+                    <input
+                      type="number"
+                      class="form-control rounded-0"
+                      id="inputPassword4"
+                    />
+                  </div>
+
+                  <div class="form-group col-sm-12 mt-3">
+                    <label for="inputPassword4">Email</label>
+                    <input
+                      type="email"
+                      class="form-control rounded-0"
+                      id="inputPassword4"
+                    />
+                  </div>
+
+                  <div class="col-12 mt-4 form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+
+                    <textarea
+                      class="form-control rounded-0"
+                      id="exampleFormControlTextarea1"
+                      rows="7"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 p-0 p-md-1 rowPad">
+                <div class="form-row row">
+                  <div class="form-group col-md-12 mt-3">
+                    <label for>Product</label>
+                    <select
+                      class="form-select rounded-0"
+                      aria-label="Default select example"
+                    >
+                      <option selected>1-3-3 button</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-lg-3 col-6 mt-3">
+                    <label for="inputEmail4">Length</label>
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="inputEmail4"
+                    />
+                  </div>
+                  <div class="form-group col-lg-3 col-6 mt-3">
+                    <label for="inputPassword4">Width</label>
+                    <input
+                      type="email"
+                      class="form-control rounded-0"
+                      id="inputPassword4"
+                    />
+                  </div>
+
+                  <div class="form-group col-lg-3 col-6 mt-3">
+                    <label for>Height</label>
+                    <select
+                      class="form-select rounded-0"
+                      aria-label="Default select example"
+                    >
+                      <option selected>1-3-3 button</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-lg-3 col-6 mt-3">
+                    <label for>Unit</label>
+                    <select
+                      class="form-select rounded-0"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Inch</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-md-6 mt-3">
+                    <label for>Printing</label>
+                    <select
+                      class="form-select rounded-0"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Full Color With Inside Printing</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6 mt-3">
+                    <label for>Materials</label>
+                    <select
+                      class="form-select rounded-0"
+                      aria-label="Default select example"
+                    >
+                      <option selected>12pt Cardboard</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-4 mt-3">
+                    <label for="inputEmail4">Quentity 1</label>
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="inputEmail4"
+                    />
+                  </div>
+
+                  <div class="form-group col-4 mt-3">
+                    <label for="inputEmail4">Quentity 2</label>
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="inputEmail4"
+                    />
+                  </div>
+
+                  <div class="form-group col-4 mt-3">
+                    <label for="inputEmail4">Quentity 3</label>
+                    <input
+                      type="text"
+                      class="form-control rounded-0"
+                      id="inputEmail4"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group col-md-12 mt-3">
+                  <label for>Delivery Deadline</label>
+                  <select
+                    class="form-select rounded-0"
+                    aria-label="Default select example"
+                  >
+                    <option selected>12pt Cardboard</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+
+                <!-- <div class="row p-0 m-0 pt-4 px-3">
+                  <div class="col-lg-3 col-6 mt-2 form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Deboss
+                    </label>
+                  </div>
+                  <div class="col-lg-3 col-6  mt-2  form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Emboss
+                    </label>
+                  </div>
+                  <div class="col-lg-3  col-6 mt-2  form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Foll Stamp
+                    </label>
+                  </div>
+                  <div class="col-lg-3  col-6 mt-2  form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Inserts
+                    </label>
+                  </div>
+
+                    <div class="col-md-5  col-sm-6 mt-2  form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                       Need Consultation
+                    </label>
+                  </div>
+                  <div class="col-md-3 col-6  mt-2  form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    PVC window
+                    </label>
+                  </div>
+                  <div class="col-md-3  col-6 mt-2  form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                     Spot UV
+                    </label>
+                  </div>
+                  <div class="col-md-6 col-sm-6  mt-2  form-check">
+                    <input class="form-check-input" type="checkbox" value
+                      id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                     Window Cut Out
+                    </label>
+                  </div>
+
+
+
+                  
+                </div> -->
+              </div>
+
+              <form action="" class="captchaform">
+                <div class="col-md-3"></div>
+
+                <div
+                  class="col-md-6 py-2 my-4 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-evenly text-center"
+                  style="border: 1px solid #f6f7fa"
+                >
+                  <h6 class="text-white pt-2">Are you human or spambot?</h6>
+                  <label class="submit__control">
+                    <div>
+                      <div class="submit__generated"></div>
+                      <i class="fa fa-refresh refreshcaptcha"></i>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-md-3"></div>
+              </form>
+              <div class="col-12 mt-3 d-flex justify-content-center">
+                <div class="img-wrapperinersecondsubmit">
+                  <button class="px-5">Packaging</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!--################> Get A Qouet End<############## -->
+
+    <!--====== Gallery Section  Start ======-->
+    <section id="gallery" class="pb-5 px-2 px-md-5">
+      <div class="py-5">
+        <div class="text-center settingmain">
+          <div class="row p-0 m-0 p-0 m-0">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <h1 class="mainhweading"><span>Top selling</span> items</h1>
+              <p class="pt-3">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered
+              </p>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+        <div class="container-fluid p-0 px-md-4">
+          <!-- Filterable Gallery -->
+          <div class="row p-0 m-0">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 p-0 m-0">
+              <ul class="gallery_tabs">
+                <li class="active" data-filter="all">All</li>
+                <li data-filter="camera">Cameras</li>
+                <li data-filter="laptop">Laptops</li>
+                <li data-filter="mobile">Mobiles</li>
+                <li data-filter="headphone">Headphones</li>
+              </ul>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+
+          <div class="row p-0 m-0 gallery_wrapper">
+            <div class="gallery_item p-0 camera">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1585218356057-dc0e8d3558bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 headphone">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1599669454699-248893623440?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlYWRwaG9uZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 laptop">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 mobile">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1596558450268-9c27524ba856?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 laptop">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1559163499-413811fb2344?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 camera">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1591533385361-f327d396db9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGNhbWVyYXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 headphone">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1610041321327-b794c052db27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhlYWRwaG9uZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 mobile">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1557690267-fad2f168bb95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 laptop">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1533740566848-5f7d3e04e3d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 headphone">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 mobile">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1551355738-1875b6664915?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item p-0 camera">
+              <h3>Embossing</h3>
+              <img
+                src="https://images.unsplash.com/photo-1515197304934-f95872d7156f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="img"
+              />
+            </div>
+          </div>
+
+          <!-- Lightbox -->
+          <div class="lightbox">
+            <div class="lightbox_wrapper">
+              <div class="lightbox_content">
+                <img src class="lightbox_img" alt="lightbox-img" />
+              </div>
+            </div>
+            <div class="lightbox_close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====== Gallery Section  End ======-->
+
+    <section class="py-5 mt-5 px-2 px-md-5 topsellingitemsection">
+      <div style="transform: skewY(4deg) !important">
+        <div class="text-center settingmain">
+          <div class="row p-0 m-0 p-0 m-0">
+            <div class="col-md-12 pb-5">
+              <h1 class="text-center mainhweading">
+                <span>Custom Printed </span> Box
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="row p-0 m-0 p-0 m-0">
+          <div class="col-md-6 contentfaqs p-0 p-md-1">
+            <div class="settingmain customhead text-justify">
+              <h4 class="pb-3">Custom Box</h4>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                unde aperiam eos ea omnis autem voluptatem animi atque culpa
+                ipsa modi illo nesciunt natus, vitae aut corrupti maiores
+                eligendi consequuntur debitis explicabo eum voluptatibus? Ab
+                quaerat iste fugit inventore voluptatibus beatae consequatur
+                quod explicabo rerum reprehenderit sit, labore obcaecati
+                laboriosam incidunt dolor blanditiis, mollitia sed ipsum in ex
+                natus! Perferendis quae quibusdam corrupti pariatur. Beatae
+                excepturi incidunt repellendus voluptatum tenetur!
+              </p>
+
+              <button class="readmorebtn mt-4 px-5">Shop Now</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 contentfaqs customimg mt-3 mt-md-0 p-0 p-md-3">
+            <img src="./asset/img/custom1.png" alt />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-2 px-md-5">
+      <div class="py-5">
+        <div class="text-center d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mainhweading"><span>FA</span>Q's</h1>
+            <p class="text-start pt-2">Frequently Asked Questions</p>
+          </div>
+        </div>
+        <div class=" ">
+          <div class="row p-0 m-0">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 p-0 p-md-1">
+              <div class="accordion">
+                <div class="accordion-item">
+                  <div class="accordion-item-header">
+                    What is Web Development?
+                  </div>
+                  <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                      Web Development broadly refers to the tasks associated
+                      with developing functional websites and applications for
+                      the Internet. The web development process includes web
+                      design, web content development, client-side/server-side
+                      scripting and network security configuration, among other
+                      tasks.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-item-header">What is HTML?</div>
+                  <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                      HTML, aka HyperText Markup Language, is the dominant
+                      markup language for creating websites and anything that
+                      can be viewed in a web browser.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-item-header">
+                    What are some basic technical skills of a Front-End
+                    developer?
+                  </div>
+                  <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                      <ul style="padding-left: 1rem">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Frameworks (CSS and JavaScript frameworks)</li>
+                        <li>Responsive Design</li>
+                        <li>Version Control/Git</li>
+                        <li>Testing/Debugging</li>
+                        <li>Browser Developer Tools</li>
+                        <li>Web Performance</li>
+                        <li>SEO (Search Engine Optimization)</li>
+
+                        <li>Command Line</li>
+                        <li>CMS (Content Management System)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-item-header">What is HTTP?</div>
+                  <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                      HTTP, aka HyperText Transfer Protocol, is the underlying
+                      protocol used by the World Wide Web and this protocol
+                      defines how messages are formatted and transmitted, and
+                      what actions Web servers and browsers should take in
+                      response to various commands.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-item-header">What is CORS?</div>
+                  <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                      CORS, aka Cross-Origin Resource Sharing, is a mechanism
+                      that enables many resources (e.g. images, stylesheets,
+                      scripts, fonts) on a web page to be requested from another
+                      domain outside the domain from which the resource
+                      originated.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--################> Print By Category Start <###########  -->
+    <section class="pt-5 px-md-5 straightbg">
+      <!-- ---------------------section1------------------------ -->
+      <!-- topsellingitemsection2 -->
+      <!-- style=" 
+  transform: skewY(-4deg);" -->
+
+      <div>
+        <div class="text-center settingmain pb-md-5">
+          <div class="row p-0 m-0">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <h1 class="mainhweading"><span>Print By</span>Categories</h1>
+              <p class="pt-3">There are many variations of passages of Lorem</p>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+
+        <!-- ---------------------section2------------------------ -->
+        <div class="container-fluid pb-5">
+
+           <!--====== Gallery Section  Start ======-->
+    <section id=""  >
+      <div class="py-5 ">
+          <div class="row p-0 m-0 gallery_wrapper">
+            <div class="gallery_item1 muImage p-0 camera" style="grid-row: span 2;">
+              <div class="sect2_bg-img p-4 rounded-4">
+                <img
+                  src="./asset/img/cardbanner1.jpg"
+                  alt="Background Image"
+                  class="sect2-img"
+                />
+                <div class="sect2-content">
+                  <p class="sec2_para text-uppercase">Box By Style</p>
+                  <h3 class="sec2_heading d-flex flex-column mb-5">
+                    <span class="letter">Supersized</span>
+                    <span class="letter">large gormat</span>
+                  </h3>
+                  <div>
+                    <button class="btn btn-lg sec2_custom-button mt-2">
+                      Shop Now<i
+                        class="fa-solid fa-arrow-right sec2_custom_icon ms-1"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+
+            <div class="gallery_item1 muImage p-0 ">
+                        <button class="px-5 mButton">Packaging</button>
+              <img
+                src="https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item1 muImage p-0 ">
+                        <button class="px-5 mButton">Packaging</button>
+              <img
+                src="https://images.unsplash.com/photo-1596558450268-9c27524ba856?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item1 muImage p-0 ">
+                        <button class="px-5 mButton">Packaging</button>
+              <img
+                src="https://images.unsplash.com/photo-1559163499-413811fb2344?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item1 muImage p-0 ">
+                        <button class="px-5 mButton">Packaging</button>
+              <img
+                src="https://images.unsplash.com/photo-1591533385361-f327d396db9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGNhbWVyYXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item1 muImage p-0 ">
+                        <button class="px-5 mButton">Packaging</button>
+              <img
+                src="https://images.unsplash.com/photo-1610041321327-b794c052db27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhlYWRwaG9uZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+            <div class="gallery_item1 muImage p-0 ">
+                        <button class="px-5 mButton">Packaging</button>
+              <img
+                src="https://images.unsplash.com/photo-1557690267-fad2f168bb95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="img"
+              />
+            </div>
+
+             
+          </div>
+          <!-- Lightbox -->
+          <div class="lightbox">
+            <div class="lightbox_wrapper">
+              <div class="lightbox_content">
+                <img src class="lightbox_img" alt="lightbox-img" />
+              </div>
+            </div>
+            <div class="lightbox_close">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+    <!--====== Gallery Section  End ======-->
+          <!-- <div class="row p-0 m-0 px-lg-3 gy-5">
+            <div class="col-md-3 col-sm-12 p-0 p-md-1">
+              <div class="sect2_bg-img p-5 rounded-4">
+                <img
+                  src="./asset/img/cardbanner1.jpg"
+                  alt="Background Image"
+                  class="sect2-img"
+                />
+                <div class="sect2-content">
+                  <p class="sec2_para text-uppercase">Box By Style</p>
+                  <h3 class="sec2_heading d-flex flex-column mb-5">
+                    <span class="letter">Supersized</span>
+                    <span class="letter">large gormat</span>
+                  </h3>
+                  <div>
+                    <button class="btn btn-lg sec2_custom-button mt-2">
+                      Shop Now<i
+                        class="fa-solid fa-arrow-right sec2_custom_icon ms-1"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-9 col-sm-12 p-0 p-md-1">
+              <div class="row p-0 m-0">
+                <div class="col-md-4">
+                  <div class="p-0 maiImage camera">
+                    <img
+                      class="wrapImage"
+                      src="https://images.unsplash.com/photo-1591533385361-f327d396db9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGNhbWVyYXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt="img"
+                    />
+                    <button class="px-5 mButton">Packaging</button>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="p-0 maiImage headphone">
+                    <img
+                      class="wrapImage"
+                      src="https://images.unsplash.com/photo-1599669454699-248893623440?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlYWRwaG9uZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      alt="img"
+                    />
+                    <button class="px-5 mButton">Packaging</button>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="p-0 maiImage laptop">
+                    <img
+                      class="wrapImage"
+                      src="https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt="img"
+                    />
+                    <button class="px-5 mButton">Packaging</button>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                  <div class="p-0 maiImage laptop">
+                    <img
+                      class="wrapImage"
+                      src="https://images.unsplash.com/photo-1559163499-413811fb2344?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGxhcHRvcHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt="img"
+                    />
+                    <button class="px-5 mButton">Packaging</button>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                  <div class="p-0 maiImage camera">
+                    <img
+                      class="wrapImage"
+                      src="https://images.unsplash.com/photo-1591533385361-f327d396db9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fGNhbWVyYXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                      alt="img"
+                    />
+                    <button class="px-5 mButton">Packaging</button>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-2">
+                  <div class="p-0 maiImage headphone">
+                    <img
+                      class="wrapImage"
+                      src="https://images.unsplash.com/photo-1610041321327-b794c052db27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhlYWRwaG9uZXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      alt="img"
+                    />
+                    <button class="px-5 mButton">Packaging</button>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="row p-0 m-0">
+                <div class="col-md-4 p-0 p-md-2 mb-3 mb-md-0">
+                  <div class="img-wrapperiner img-wrapperinersmall rounded-4">
+                    <button class="px-5">Packaging</button>
+                    <img class="inner-img" src="./asset/img/selling2.png" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 p-0 p-md-2 mb-md-0 mb-3">
+                  <div class="img-wrapperiner img-wrapperinersmall rounded-4">
+                    <button class="px-5">Packaging</button>
+                    <img class="inner-img" src="./asset/img/selling3.png" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 p-0 p-md-2 mb-md-0 mb-3">
+                  <div class="img-wrapperiner img-wrapperinersmall rounded-4">
+                    <button class="px-5">Packaging</button>
+                    <img class="inner-img" src="./asset/img/selling6.png" />
+                  </div>
+                </div>
+
+                <div class="col-md-4 p-0 p-md-1 mb-md-0 p-md-2 mb-3">
+                  <div class="img-wrapperiner img-wrapperinersmall rounded-4">
+                    <button class="px-5">Packaging</button>
+                    <img class="inner-img" src="./asset/img/selling5.png" />
+                  </div>
+                </div>
+                <div class="col-md-4 p-0 p-md-1 mb-md-0 p-md-2 mb-3">
+                  <div class="img-wrapperiner img-wrapperinersmall rounded-4">
+                    <button class="px-5">Packaging</button>
+                    <img class="inner-img" src="./asset/img/selling6.png" />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-0 p-md-1 mb-md-0 p-md-2 mb-3">
+                  <div class="img-wrapperiner img-wrapperinersmall rounded-4">
+                    <button class="px-5">Packaging</button>
+                    <img class="inner-img" src="./asset/img/selling3.png" />
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!--################> Print By Category End <#############  -->
+
+    <section class>
+      <div class="container-fluid bgFixed position-relative">
+        <div class="text-center fixedtext">
+          <h3 class="pb-2">Extra 30% OFF Online</h3>
+          <h2 class="pb-1">Lorem ipsum dolor sit amet consectetur</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <button class="py-3 mt-4">Read More</button>
+        </div>
+      </div>
+    </section>
+
+    <!--#################> Client Reviews  Start <##################-->
+    <section class="pt-5 straightbg">
+      <!-- topsellingitemsection2 -->
+      <!-- style="transform: skewY(-4deg);" -->
+      <div>
+        <div class="text-center settingmain">
+          <div class="row p-0 m-0 p-0 m-0">
+            <div class="col-md-4 p-0 m-0"></div>
+            <div class="col-md-4 p-0 m-0">
+              <h1 class="mainhweading"><span>Users</span> Review</h1>
+            </div>
+            <div class="col-md-4 p-0 m-0"></div>
+          </div>
+        </div>
+
+        <!-- ---Explore Our Services Banner 2--- -->
+        <div class="slider-div mb-5 pb-5">
+          <div class="container swiper border-8">
+            <div class="row p-0 m-0 m-0 topic-card slider-bg-cl">
+              <div class="col-lg-12 col-12">
+                <div class="slide-container">
+                  <div class="card-wrapper swiper-wrapper">
+                    <div class="topic_card swiper-slide">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="card-text pt-3 pt-3">
+                            "Some quick example text to build on the card title
+                            and make up the bulk of the card's content. "
+                          </p>
+                        </div>
+                        <div class="d-flex p-3">
+                          <div>
+                            <img
+                              src="./asset/img/Ellipse 1.png"
+                              class="card-img-top1"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="ps-2">
+                            <h6 class="mb-0">Jasseca ccorder</h6>
+                            <p class="mm-0 cardtextname">
+                              Allegra January 2022
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topic_card swiper-slide">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="card-text pt-3 pt-3">
+                            "Some quick example text to build on the card title
+                            and make up the bulk of the card's content. "
+                          </p>
+                        </div>
+                        <div class="d-flex p-3">
+                          <div>
+                            <img
+                              src="./asset/img/Ellipse 1.png"
+                              class="card-img-top1"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="ps-2">
+                            <h6 class="mb-0">Jasseca ccorder</h6>
+                            <p class="mm-0 cardtextname">
+                              Allegra January 2022
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topic_card swiper-slide">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="card-text pt-3 pt-3">
+                            "Some quick example text to build on the card title
+                            and make up the bulk of the card's content. "
+                          </p>
+                        </div>
+                        <div class="d-flex p-3">
+                          <div>
+                            <img
+                              src="./asset/img/Ellipse 1.png"
+                              class="card-img-top1"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="ps-2">
+                            <h6 class="mb-0">Jasseca ccorder</h6>
+                            <p class="mm-0 cardtextname">
+                              Allegra January 2022
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topic_card swiper-slide">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="card-text pt-3 pt-3">
+                            "Some quick example text to build on the card title
+                            and make up the bulk of the card's content. "
+                          </p>
+                        </div>
+                        <div class="d-flex p-3">
+                          <div>
+                            <img
+                              src="./asset/img/Ellipse 1.png"
+                              class="card-img-top1"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="ps-2">
+                            <h6 class="mb-0">Jasseca ccorder</h6>
+                            <p class="mm-0 cardtextname">
+                              Allegra January 2022
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topic_card swiper-slide">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="card-text pt-3 pt-3">
+                            "Some quick example text to build on the card title
+                            and make up the bulk of the card's content. "
+                          </p>
+                        </div>
+                        <div class="d-flex p-3">
+                          <div>
+                            <img
+                              src="./asset/img/Ellipse 1.png"
+                              class="card-img-top1"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="ps-2">
+                            <h6 class="mb-0">Jasseca ccorder</h6>
+                            <p class="mm-0 cardtextname">
+                              Allegra January 2022
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topic_card swiper-slide">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="card-text pt-3 pt-3">
+                            "Some quick example text to build on the card title
+                            and make up the bulk of the card's content. "
+                          </p>
+                        </div>
+                        <div class="d-flex p-3">
+                          <div>
+                            <img
+                              src="./asset/img/Ellipse 1.png"
+                              class="card-img-top1"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="ps-2">
+                            <h6 class="mb-0">Jasseca ccorder</h6>
+                            <p class="mm-0 cardtextname">
+                              Allegra January 2022
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="topic_card swiper-slide">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex">
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                            <div class="px-1">
+                              <svg
+                                width="12"
+                                height="11"
+                                viewBox="0 0 12 11"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M6.49845 0.276638C6.27636 -0.092212 5.72364 -0.0922134 5.50155 0.276638L3.93747 2.87428C3.82776 3.05649 3.63813 3.18083 3.42199 3.21229L0.490797 3.63894C-0.00151692 3.7106 -0.174208 4.30963 0.209201 4.61575L2.39281 6.35918C2.59494 6.52057 2.68998 6.77513 2.64088 7.02362L2.06968 9.91441C1.97939 10.3714 2.47718 10.7264 2.9043 10.5097L5.66438 9.10916C5.87446 9.00256 6.12554 9.00256 6.33562 9.10916L9.0957 10.5097C9.52282 10.7264 10.0206 10.3714 9.93032 9.91441L9.35912 7.02362C9.31002 6.77513 9.40506 6.52057 9.60719 6.35918L11.7908 4.61575C12.1742 4.30963 12.0015 3.7106 11.5092 3.63894L8.57802 3.21229C8.36187 3.18083 8.17224 3.05649 8.06253 2.87428L6.49845 0.276638Z"
+                                  fill="#FFA60D"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="card-text pt-3 pt-3">
+                            "Some quick example text to build on the card title
+                            and make up the bulk of the card's content. "
+                          </p>
+                        </div>
+                        <div class="d-flex p-3">
+                          <div>
+                            <img
+                              src="./asset/img/Ellipse 1.png"
+                              class="card-img-top1"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="ps-2">
+                            <h6 class="mb-0">Jasseca ccorder</h6>
+                            <p class="mm-0 cardtextname">
+                              Allegra January 2022
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--#################> Client Reviews End  <##################-->
+
+    <section class="py-5 my-5">
+      <!-- ------------------------------Section3----------------------------- -->
+
+      <div class="text-center settingmain pb-5">
+        <div class="row p-0 m-0 p-0 m-0">
+          <div class="col-md-4 p-0 m-0"></div>
+          <div class="col-md-4 p-0 m-0">
+            <h1 class="mainhweading"><span>Our Latest</span> Blogs</h1>
+          </div>
+          <div class="col-md-4 p-0 m-0"></div>
+        </div>
+      </div>
+
+      <div class="container-fluid pb-5">
+        <div class="row p-0 m-0 px-md-3 p-0 p-md-1">
+          <div class="col-lg-3 col-md-12 col-sm-12 p-0 p-md-1">
+            <div class="card Card-FB mb-3">
+              <div class="img-container">
+                <img
+                  src="./asset/img/blog_crd_1.jpg"
+                  alt="Background Image"
+                  class="card-img-top"
+                />
+                <div class="content-overlay">
+                  <div class="our-team">
+                    <div class="picture mt-3 mb-2">
+                      <a href class="text-decoration-none">
+                        <div class="rounded-circle-red ms-4">
+                          06
+                          <span class="spa_mrch_txt">MAR</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class>
+                <div class>
+                  <span class></span
+                  ><a
+                    href
+                    rel="category tag"
+                    class="text-decoration-none life_txt"
+                    >Lifestyle</a
+                  >
+                </div>
+                <h3 class="sigma entry-title">
+                  <a href rel="bookmark" class="text-decoration-none cont_sec_3"
+                    >Tips to Find Best Print on Demand Business Name Ideas</a
+                  >
+                </h3>
+              </div>
+              <div class>
+                <div class>
+                  <a class="more-link text-decoration-none text-dark" href
+                    >Read more<i
+                      class="fa-solid fa-arrow-right sec2_custom_icon ms-1"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12 p-0 p-md-1">
+            <div class="card Card-FB mb-3">
+              <div class="img-container">
+                <img
+                  src="./asset/img/blog_crd_2.jpg"
+                  alt="Background Image"
+                  class="card-img-top"
+                />
+                <div class="content-overlay">
+                  <div class="our-team">
+                    <div class="picture mt-3 mb-2">
+                      <a href class="text-decoration-none">
+                        <div class="rounded-circle-red ms-4">
+                          06
+                          <span class="spa_mrch_txt">MAR</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class>
+                <div class>
+                  <span class></span
+                  ><a
+                    href
+                    rel="category tag"
+                    class="text-decoration-none life_txt"
+                    >Print Company</a
+                  >
+                </div>
+                <h3 class="sigma entry-title">
+                  <a href rel="bookmark" class="text-decoration-none cont_sec_3"
+                    >Tips to Find Best Print on Demand Business Name Ideas</a
+                  >
+                </h3>
+              </div>
+              <div class>
+                <div class>
+                  <a class="more-link text-decoration-none text-dark" href
+                    >Read more<i
+                      class="fa-solid fa-arrow-right sec2_custom_icon ms-1"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12 p-0 p-md-1">
+            <div class="card Card-FB mb-3">
+              <div class="img-container">
+                <img
+                  src="./asset/img/blog_crd_3.jpg"
+                  alt="Background Image"
+                  class="card-img-top"
+                />
+                <div class="content-overlay">
+                  <div class="our-team">
+                    <div class="picture mt-3 mb-2">
+                      <a href class="text-decoration-none">
+                        <div class="rounded-circle-red ms-4">
+                          06
+                          <span class="spa_mrch_txt">MAR</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class>
+                <div class>
+                  <span class></span
+                  ><a
+                    href
+                    rel="category tag"
+                    class="text-decoration-none life_txt"
+                    >Print Company</a
+                  >
+                </div>
+                <h3 class="sigma entry-title">
+                  <a href rel="bookmark" class="text-decoration-none cont_sec_3"
+                    >Tips to Find Best Print on Demand Business Name Ideas</a
+                  >
+                </h3>
+              </div>
+              <div class>
+                <div class>
+                  <a class="more-link text-decoration-none text-dark" href
+                    >Read more<i
+                      class="fa-solid fa-arrow-right sec2_custom_icon ms-1"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12 p-0 p-md-1">
+            <div class="card Card-FB mb-3">
+              <div class="img-container">
+                <img
+                  src="./asset/img/blog_crd_3.jpg"
+                  alt="Background Image"
+                  class="card-img-top"
+                />
+                <div class="content-overlay">
+                  <div class="our-team">
+                    <div class="picture mt-3 mb-2">
+                      <a href class="text-decoration-none">
+                        <div class="rounded-circle-red ms-4">
+                          06
+                          <span class="spa_mrch_txt">MAR</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class>
+                <div class>
+                  <span class></span
+                  ><a
+                    href
+                    rel="category tag"
+                    class="text-decoration-none life_txt"
+                    >Print Company</a
+                  >
+                </div>
+                <h3 class="sigma entry-title">
+                  <a href rel="bookmark" class="text-decoration-none cont_sec_3"
+                    >Tips to Find Best Print on Demand Business Name Ideas</a
+                  >
+                </h3>
+              </div>
+              <div class>
+                <div class>
+                  <a class="more-link text-decoration-none text-dark" href
+                    >Read more<i
+                      class="fa-solid fa-arrow-right sec2_custom_icon ms-1"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--#################> Footer Start <############### -->
+    <section class="position-relative">
+      <!-- footerTop starts  -->
+      <div class="container footerTop px-2 px-md-4 py-3 row">
+        <div
+          class="location d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="locationIcon d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="locationText mt-1 ms-3">
+            <span class="text-uppercase">Our Location</span>
+            <br />
+            <small>90 State Street, Albany</small>
+          </div>
+        </div>
+
+        <div
+          class="call d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="callIcon d-flex justify-content-center align-items-center mt-1"
+          >
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="callText mt-1 ms-3">
+            <span class="text-uppercase">Call Us</span> <br />
+            <small>315 210 8020</small>
+          </div>
+        </div>
+
+        <div
+          class="whatsapp d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="whatsappIcon d-flex justify-content-center align-items-center mt-1"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="whatsappText mt-1 ms-3">
+            <span class="text-uppercase">whatsapp</span> <br />
+            <small>716 815 6064 </small>
+          </div>
+        </div>
+        <div
+          class="email d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="emailIcon d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="emailText mt-1 ms-3">
+            <span class="text-uppercase">email us</span> <br />
+            <small>sales@ibexpackaging.com </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- footerTop ends  -->
+
+      <!-- footer starts  -->
+      <footer class="footer mt-5 container-fluid">
+        <div class="footerContent row mx-md-2 d-flex flex-wrap">
+          <!-- Footer Info -->
+          <div
+            class="footerInfo col-12 col-md-6 col-lg-3 d-flex flex-column gap-4 mb-4 align-items-start"
+          >
+            <div class="footerInfoLogo">
+              <img src="./asset/img/Logo.svg" alt="Logo" />
+            </div>
+            <div class="footerInfoText">
+              <p class="ftext text-start text-md-start">
+                Distrusts delighted Excuse few the remain highly feebly add
+                people manner say. It high at my mind by roof.
+              </p>
+            </div>
+            <div class="footerInfoSmlinks d-flex gap-2">
+              <div><i class="fa-brands fa-facebook-f"></i></div>
+              <div><i class="fa-brands fa-twitter mt-1"></i></div>
+              <div><i class="fa-brands fa-instagram mt-1"></i></div>
+              <div><i class="fa-brands fa-pinterest mt-1"></i></div>
+            </div>
+          </div>
+
+          <!-- Footer Contact -->
+          <div
+            class="footerContact col-12 col-md-6 col-lg-3 justify-content-center align-items-start d-flex mb3 flex-column"
+          >
+            <h5 class="text-capitalize mb-4">get in touch</h5>
+            <p class="ftext m-0 lh-lg text-start">
+              2972 Westheimer Rd. Santa Ana, Illinois 85486 <br />
+              support@example.com
+            </p>
+            <br />
+            <h5 class="fw500 ftext cn">+ (406) 555-0120</h5>
+          </div>
+
+          <!-- Footer Links -->
+          <div
+            class="footerLinks col-12 col-md-12 col-lg-6 m-0 d-flex justify-content-between pe-5 flex-column flex-md-row align-items-start mt-4"
+          >
+            <div class="Info">
+              <h5 class="text-capitalize mb-4">information</h5>
+              <ul class="lh-lg">
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Help center</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">shipping</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">returns</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">policies</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">gift cards</a>
+                </li>
+              </ul>
+            </div>
+            <div class="Usefull">
+              <h5 class="text-capitalize mb-4">Useful links</h5>
+              <ul class="lh-lg">
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">My Account</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Order Tracking</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">All Products</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">All Services</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Service Detail</a>
+                </li>
+              </ul>
+            </div>
+            <div class="About">
+              <h5 class="text-capitalize mb-4">About us</h5>
+              <ul class="lh-lg">
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Our story</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Contacts</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Affiliate Program</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Referral Program</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">careers</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footerbottom">
+          <p class="pt-2">CopyWrite @2023.Allright Reserved</p>
+        </div>
+      </footer>
+      <!-- footer ends  -->
+    </section>
+    <!--#################> Footer End <############### -->
+
+    <script src="./asset/js/swiper-bundle.min.js"></script>
+    <script src="./asset/js/script.js"></script>
+    <script src="./asset/js/gallary.js"></script>
+
+    <script>
+      const accordionItemHeaders = document.querySelectorAll(
+        ".accordion-item-header"
+      );
+
+      accordionItemHeaders.forEach((accordionItemHeader) => {
+        accordionItemHeader.addEventListener("click", (event) => {
+          // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+
+          const currentlyActiveAccordionItemHeader = document.querySelector(
+            ".accordion-item-header.active"
+          );
+          if (
+            currentlyActiveAccordionItemHeader &&
+            currentlyActiveAccordionItemHeader !== accordionItemHeader
+          ) {
+            currentlyActiveAccordionItemHeader.classList.toggle("active");
+            currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+          }
+          accordionItemHeader.classList.toggle("active");
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight =
+              accordionItemBody.scrollHeight + "px";
+          } else {
+            accordionItemBody.style.maxHeight = 0;
+          }
+        });
+      });
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--###############> AOS Animatoion End<###############  -->
+
+    <!-- <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+    <script>
+      var a,
+        b,
+        c,
+        submitContent,
+        captcha,
+        locked,
+        validSubmit = false,
+        timeoutHandle;
+
+      // Generating a simple sum (a + b) to make with a result (c)
+      function generateCaptcha() {
+        a = Math.ceil(Math.random() * 10);
+        b = Math.ceil(Math.random() * 10);
+        c = a + b;
+        submitContent =
+          "<span>" +
+          a +
+          "</span> + <span>" +
+          b +
+          "</span>" +
+          ' = <input class="submit__input" type="text" maxlength="2" size="2" required />';
+        $(".submit__generated").html(submitContent);
+
+        init();
+      }
+
+      // Check the value 'c' and the input value.
+      function checkCaptcha() {
+        if (captcha === c) {
+          // Pop the green valid icon
+          $(".submit__generated").removeClass("unvalid").addClass("valid");
+          $(".submit").removeClass("overlay");
+          $(".submit__overlay").fadeOut("fast");
+
+          validSubmit = true;
+        } else {
+          // Pop the red unvalid icon
+          $(".submit__generated").removeClass("valid").addClass("unvalid");
+          $(".submit").addClass("overlay");
+          $(".submit__overlay").fadeIn("fast");
+          validSubmit = false;
+        }
+        return validSubmit;
+      }
+
+      function unlock() {
+        locked = false;
+      }
+
+      // Refresh button click - Reset the captcha
+      $(".submit__control i.fa-refresh").on("click", function () {
+        if (!locked) {
+          locked = true;
+          setTimeout(unlock, 500);
+          generateCaptcha();
+          setTimeout(checkCaptcha, 0);
+        }
+      });
+
+      // init the action handlers - mostly useful when 'c' is refreshed
+      function init() {
+        $(".captchaform").on("submit", function (e) {
+          e.preventDefault();
+          if ($(".submit__generated").hasClass("valid")) {
+            // var formValues = [];
+            captcha = $(".submit__input").val();
+            if (captcha !== "") {
+              captcha = Number(captcha);
+            }
+
+            checkCaptcha();
+
+            if (validSubmit === true) {
+              validSubmit = false;
+              // Temporary direct 'success' simulation
+              submitted();
+            }
+          } else {
+            return false;
+          }
+        });
+
+        // Captcha input result handler
+        $(".submit__input").on(
+          "propertychange change keyup input paste",
+          function () {
+            // Prevent the execution on the first number of the string if it's a 'multiple number string'
+            // (i.e: execution on the '1' of '12')
+            window.clearTimeout(timeoutHandle);
+            timeoutHandle = window.setTimeout(function () {
+              captcha = $(".submit__input").val();
+              if (captcha !== "") {
+                captcha = Number(captcha);
+              }
+              checkCaptcha();
+            }, 150);
+          }
+        );
+
+        // Add the ':active' state CSS when 'enter' is pressed
+
+        // Refresh button click - Reset the captcha
+        $(".submit-control i.fa-refresh").on("click", function () {
+          if (!locked) {
+            locked = true;
+            setTimeout(unlock, 500);
+            generateCaptcha();
+            setTimeout(checkCaptcha, 0);
+          }
+        });
+
+        // Submit white overlay click
+        $(".submit-form-overlay").on("click", function () {
+          checkCaptcha();
+        });
+      }
+
+      generateCaptcha();
+    </script>
+  </body>
+</html>

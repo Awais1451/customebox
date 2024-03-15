@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom Box Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/mainhome.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- F-Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./asset/css/test.css" />
+
+    <!--###############> AOS Animation Style Start <#################  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!--###############> AOS Animation Style End  <#################  -->
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+      .captchaform {
+        position: relative;
+        margin: 20px auto;
+        width: 300px;
+      }
+
+      .submit__generated {
+        display: inline-block;
+      }
+
+      .submit__generated span {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        vertical-align: center;
+        line-height: 35px;
+        font-weight: bold;
+        font-size: 16px;
+        /* color: White; */
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid white;
+        border-radius: 4px;
+      }
+
+      .submit__generated.valid:after,
+      .submit__generated.unvalid:after {
+        font-family: FontAwesome;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+
+      .submit__generated.valid:after {
+        content: "\f00c";
+        color: #2ecc71;
+      }
+
+      .submit__generated.unvalid:after {
+        content: "\f00d";
+        color: #e74c3c;
+      }
+
+      .submit__generated.valid .submit__input {
+        border: 1px solid #2ecc71;
+        color: #2ecc71 !important;
+      }
+
+      .submit__generated.unvalid .submit__input {
+        border: 1px solid #e74c3c;
+        color: #e74c3c;
+      }
+
+      .submit__generated .submit__input {
+        position: relative;
+        outline: 0;
+        height: 35px;
+        width: 35px;
+        border-radius: 4px;
+        border: 1px solid #42a0dd;
+        color: #42a0dd;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        top: -2px;
+      }
+
+      .refreshcaptcha {
+        margin: 4px 0 0px 5px;
+        padding: 5px;
+        font-size: 18px;
+        color: White;
+        cursor: pointer;
+        transform-origin: center center;
+        transition: transform 0.2s ease-out, color 0.2s ease-out;
+      }
+      .refreshcaptcha:hover {
+        color: white;
+        transform: rotate(180deg);
+      }
+
+      .submit__error,
+      .submit__error--empty {
+        color: #e74c3c;
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 100px;
+      }
+
+      .submit {
+        display: block;
+        margin: 50px 0;
+        padding: 7px 15px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        outline: none;
+        border: 0;
+        background-color: #42a0dd;
+        background-clip: padding-box;
+        border-radius: 3px;
+        box-shadow: 0 4px 0 #2c81ba;
+        opacity: 1;
+        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+      }
+
+      .submit:hover {
+        background-color: #3498db;
+      }
+
+      .submit:active,
+      .submit.enter-press,
+      .submit.overlay {
+        margin: 55px 0 46px 0;
+        box-shadow: none;
+      }
+
+      .submit__overlay {
+        height: 50px;
+        width: 110px;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        margin-top: -90px;
+        margin-left: -5px;
+      }
+
+      .low-opa {
+        opacity: 0.4;
+      }
+
+      .fadeOut {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      .fadeIn {
+        opacity: 1 !important;
+        transform: translateY(0px) !important;
+      }
+      .bgBefore {
+        position: relative;
+      }
+      .bgBefore::after {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: #fab900;
+        top: -40px;
+        left: 110px;
+        z-index: -1;
+      }
+
+      .zI-2 {
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <!--#################> Main Home Page Start<############# -->
+
+     <!-- ----------Navbar------------------------->
+     <div class="container py-2">
+      <div class="row p-0 m-0">
+        <div class="col-lg-3">
+          <a href class="logo d-none d-lg-block"
+            ><img src="./asset/img/logo.png" class="mb-2" alt width="150px"
+          /></a>
+        </div>
+        <div class="col-lg-6 p-0 m-0">
+          <div class="d-flex justify-content-around pt-2">
+            <div>
+              <a href class="text-decoration-none">
+                <i class="fa-regular fa-message"></i>
+                <span class="contact-txt ms-sm-2 text-nowrap"
+                  >(510) 500-9533</span
+                >
+              </a>
+            </div>
+            <div>
+              <a href class="text-decoration-none">
+                <i class="fa-solid fa-phone ms-sm-3"></i>
+                <span class="contact-txt ms-sm-2 text-nowrap"
+                  >sales@oxopackaging.com</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 pt-1 d-flex d-none d-lg-flex justify-content-end">
+          <button class="nav-btn">Login</button>
+          <button class="nav-btn2 ms-3">Signup</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="nav-bg">
+      <div class="container">
+        <div class="row p-0 m-0">
+          <nav class="navbar navbar-expand-lg nav-bg">
+            <div class="container d-flex justify-content-between">
+              <a href class="logo d-block d-lg-none"
+                ><img src="./asset/img/logo.png" class="mb-2" alt width="150px"
+              /></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <span class="navbar-toggler-icon toggle-clr"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse navv"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+                  <li class="nav-item me-3">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown me-3" id="BoxByIndus">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Boxes by Industry
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown me-3" id="BoxByStylematerail" >
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Boxes by Material
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="BoxByStyle" class="nav-item dropdown me-3">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Boxes by Style
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Request a Quote</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Blog</a>
+                  </li>
+                </ul>
+                <div class="searchbar my-1">
+                  <input
+                    class="search_input"
+                    type="text"
+                    name
+                    placeholder="Search Product"
+                  />
+                  <i class="fas fa-search search_icon"></i>
+                </div>
+
+                <div>
+                  <div class="col-md-3 d-flex d-sm-block d-lg-none">
+                    <button class="nav-btn mb-3">Login</button>
+                    <button class="nav-btn2 ms-1">Signup</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+      
+    <div
+    class="offcanvas offcanvas-start"
+    tabindex="-1"
+    id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button
+        type="button"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+        <li class="nav-item me-3">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Boxes by Industry
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown me-3">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Boxes by Material
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Boxes by Style
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Request a Quote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Blog</a>
+        </li>
+      </ul>
+      <div class="searchbar mb-3">
+        <input
+          class="search_input w-100"
+          type="text"
+          name
+          placeholder="Search Product"
+        />
+        <i class="fas fa-search search_icon"></i>
+      </div>
+
+      <div>
+        <div class="col-md-12 d-flex d-sm-block d-lg-none">
+          <button class="nav-btnoff mb-3 w-100">Login</button>
+          <button class="nav-btn2off">Signup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--################> OffCanva End<################# -->
+    <!--################### get in touch sction############ -->
+    <div class="container-fluid bgCont px-5">
+      <div class="text-center settingmain my-5">
+        <div class="row p-0 m-0 p-0 m-0">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <h1 class="mainhweading"><span>Contact</span>US</h1>
+            <p class="pt-3">There are many variations of passages of Lorem</p>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+      <div class="row my-5 py-3">
+        <div class="col-md-6">
+          <small>POPULAR PRODCTS</small>
+          <h1>Get in touch with us</h1>
+          <small class="mt-3">
+            Get in touch to discuss your employee wellbeing needs today. Please
+            give us a call, drop us an email or fill out the contact form and
+            we’ll get back to you.
+          </small>
+          <!-- details -->
+          <div class="my-3">
+            <!-- single detail -->
+            <div class="d-flex align-items-start">
+              <span class="icon">
+                <i
+                  class="fa-solid fa-map-location-dot"
+                  style="color: #fab900; font-size: 24px"
+                ></i
+              ></span>
+              <div class="ms-2">
+                <h5>Headquarter</h5>
+                <p class="my-4">
+                  Head Office: 785 15h Street, Office 478 Berlin, De 81566
+                </p>
+              </div>
+            </div>
+            <!-- single detail -->
+            <div class="d-flex align-items-start">
+              <span class="icon">
+                <i
+                  class="fa-solid fa-square-phone"
+                  style="color: #fab900; font-size: 24px"
+                ></i
+              ></span>
+              <div class="ms-2">
+                <h5>Phone Number</h5>
+                <p class="my-4">
+                  Mobile: 084 3456 19 89 <br />
+                  Hotline: 1900 26886
+                </p>
+              </div>
+            </div>
+            <!-- single detail -->
+            <div class="d-flex align-items-start">
+              <span class="icon">
+                <i
+                  class="fa-solid fa-envelope"
+                  style="color: #fab900; font-size: 24px"
+                ></i>
+              </span>
+              <div class="ms-2">
+                <h5>E-mail Us</h5>
+                <p class="my-4">hello@printec.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <di class="col-md-6 locationsetting">
+
+          
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.213161630699!2d73.07994391066526!3d33.6516382386669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df957b275e04af%3A0x5a0bf63abfc200fb!2sAlright%20Tech%20Private%20Limited!5e0!3m2!1sen!2s!4v1701171200846!5m2!1sen!2s"
+             style="width: 100%;"
+              height="450"
+              style="border: 0; border-radius: 30px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+           
+          <!-- <div class="zI-2">
+            <img class="img-fluid" src="./asset/img/quoteImg.png" alt="" />
+          </div> -->
+        </di>
+      </div>
+
+
+
+
+      
+     
+    </div>
+    
+          <!--################> Get A Qouet Start <############## -->
+          <section class="my-5 pb-5">
+            <div class="text-center settingmain">
+              <div class="row p-0 m-0 p-0 m-0">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                  <h1 class="mainhweading"><span>Get A Free</span> Quote</h1>
+                  <p class="pt-3">There are many variations of passages of Lorem</p>
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+            </div>
+            <div class="mainnewqoute">
+              <div class="container pb-3">
+                <form>
+                  <div class="row p-0 m-0 newqoute">
+                    <div class="col-md-6 p-0 p-md-1">
+                      <div class="form-row row rowPad">
+                        <div class="form-group col-sm-6 mt-3">
+                          <label for="inputEmail4">Name</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="inputEmail4"
+                          />
+                        </div>
+                        <div class="form-group col-sm-6 mt-3">
+                          <label for="inputPassword4">Phone</label>
+                          <input
+                            type="number"
+                            class="form-control rounded-0"
+                            id="inputPassword4"
+                          />
+                        </div>
+      
+                        <div class="form-group col-sm-12 mt-3">
+                          <label for="inputPassword4">Email</label>
+                          <input
+                            type="email"
+                            class="form-control rounded-0"
+                            id="inputPassword4"
+                          />
+                        </div>
+      
+                        <div class="col-12 mt-4 form-group">
+                          <label for="exampleFormControlTextarea1">Message</label>
+      
+                          <textarea
+                            class="form-control rounded-0"
+                            id="exampleFormControlTextarea1"
+                            rows="7"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="col-md-6 p-0 p-md-1 rowPad">
+                      <div class="form-row row">
+                        <div class="form-group col-md-12 mt-3">
+                          <label for>Product</label>
+                          <select
+                            class="form-select rounded-0"
+                            aria-label="Default select example"
+                          >
+                            <option selected>1-3-3 button</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-lg-3 col-6 mt-3">
+                          <label for="inputEmail4">Length</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="inputEmail4"
+                          />
+                        </div>
+                        <div class="form-group col-lg-3 col-6 mt-3">
+                          <label for="inputPassword4">Width</label>
+                          <input
+                            type="email"
+                            class="form-control rounded-0"
+                            id="inputPassword4"
+                          />
+                        </div>
+      
+                        <div class="form-group col-lg-3 col-6 mt-3">
+                          <label for>Height</label>
+                          <select
+                            class="form-select rounded-0"
+                            aria-label="Default select example"
+                          >
+                            <option selected>1-3-3 button</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-lg-3 col-6 mt-3">
+                          <label for>Unit</label>
+                          <select
+                            class="form-select rounded-0"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Inch</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+      
+                        <div class="form-group col-md-6 mt-3">
+                          <label for>Printing</label>
+                          <select
+                            class="form-select rounded-0"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Full Color With Inside Printing</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6 mt-3">
+                          <label for>Materials</label>
+                          <select
+                            class="form-select rounded-0"
+                            aria-label="Default select example"
+                          >
+                            <option selected>12pt Cardboard</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+      
+                        <div class="form-group col-4 mt-3">
+                          <label for="inputEmail4">Quentity 1</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="inputEmail4"
+                          />
+                        </div>
+      
+                        <div class="form-group col-4 mt-3">
+                          <label for="inputEmail4">Quentity 2</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="inputEmail4"
+                          />
+                        </div>
+      
+                        <div class="form-group col-4 mt-3">
+                          <label for="inputEmail4">Quentity 3</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-0"
+                            id="inputEmail4"
+                          />
+                        </div>
+                      </div>
+      
+                      <div class="form-group col-md-12 mt-3">
+                        <label for>Delivery Deadline</label>
+                        <select
+                          class="form-select rounded-0"
+                          aria-label="Default select example"
+                        >
+                          <option selected>12pt Cardboard</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+      
+                    <form action="" class="captchaform">
+                      <div class="col-md-3"></div>
+      
+                      <div
+                        class="col-md-6 py-2 my-4 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-evenly text-center"
+                        style="border: 1px solid #f6f7fa"
+                      >
+                        <h6 class="text-white pt-2">Are you human or spambot?</h6>
+                        <label class="submit__control">
+                          <div>
+                            <div class="submit__generated"></div>
+                            <i class="fa fa-refresh refreshcaptcha"></i>
+                          </div>
+                        </label>
+                      </div>
+      
+                      <div class="col-md-3"></div>
+                    </form>
+                    <div class="col-12 mt-3 d-flex justify-content-center">
+                      <div class="img-wrapperinersecondsubmit">
+                        <button class="px-5">Packaging</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <!--################> Get A Qouet End<############## -->
+      
+
+    <!--################# get in touch section  end ###########-->
+
+
+    <!--#################> Footer Start <############### -->
+    <section class="position-relative">
+      <!-- footerTop starts  -->
+      <div class="container footerTop px-2 px-md-4 py-3 row">
+        <div
+          class="location d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="locationIcon d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="locationText mt-1 ms-3">
+            <span class="text-uppercase">Our Location</span>
+            <br />
+            <small>90 State Street, Albany</small>
+          </div>
+        </div>
+
+        <div
+          class="call d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="callIcon d-flex justify-content-center align-items-center mt-1"
+          >
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="callText mt-1 ms-3">
+            <span class="text-uppercase">Call Us</span> <br />
+            <small>315 210 8020</small>
+          </div>
+        </div>
+
+        <div
+          class="whatsapp d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="whatsappIcon d-flex justify-content-center align-items-center mt-1"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="whatsappText mt-1 ms-3">
+            <span class="text-uppercase">whatsapp</span> <br />
+            <small>716 815 6064 </small>
+          </div>
+        </div>
+        <div
+          class="email d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1"
+        >
+          <div
+            class="emailIcon d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="emailText mt-1 ms-3">
+            <span class="text-uppercase">email us</span> <br />
+            <small>sales@ibexpackaging.com </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- footerTop ends  -->
+
+      <!-- footer starts  -->
+      <footer class="footer mt-5 container-fluid">
+        <div class="footerContent row mx-md-2 d-flex flex-wrap">
+          <!-- Footer Info -->
+          <div
+            class="footerInfo col-12 col-md-6 col-lg-3 d-flex flex-column gap-4 mb-4 align-items-start"
+          >
+            <div class="footerInfoLogo">
+              <img src="./asset/img/Logo.svg" alt="Logo" />
+            </div>
+            <div class="footerInfoText">
+              <p class="ftext text-start text-md-start">
+                Distrusts delighted Excuse few the remain highly feebly add
+                people manner say. It high at my mind by roof.
+              </p>
+            </div>
+            <div class="footerInfoSmlinks d-flex gap-2">
+              <div><i class="fa-brands fa-facebook-f"></i></div>
+              <div><i class="fa-brands fa-twitter mt-1"></i></div>
+              <div><i class="fa-brands fa-instagram mt-1"></i></div>
+              <div><i class="fa-brands fa-pinterest mt-1"></i></div>
+            </div>
+          </div>
+
+          <!-- Footer Contact -->
+          <div
+            class="footerContact col-12 col-md-6 col-lg-3 justify-content-center align-items-start d-flex mb3 flex-column"
+          >
+            <h5 class="text-capitalize mb-4">get in touch</h5>
+            <p class="ftext m-0 lh-lg text-start">
+              2972 Westheimer Rd. Santa Ana, Illinois 85486 <br />
+              support@example.com
+            </p>
+            <br />
+            <h5 class="fw500 ftext cn">+ (406) 555-0120</h5>
+          </div>
+
+          <!-- Footer Links -->
+          <div
+            class="footerLinks col-12 col-md-12 col-lg-6 m-0 d-flex justify-content-between pe-5 flex-column flex-md-row align-items-start mt-4"
+          >
+            <div class="Info">
+              <h5 class="text-capitalize mb-4">information</h5>
+              <ul class="lh-lg">
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Help center</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">shipping</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">returns</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">policies</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">gift cards</a>
+                </li>
+              </ul>
+            </div>
+            <div class="Usefull">
+              <h5 class="text-capitalize mb-4">Useful links</h5>
+              <ul class="lh-lg">
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">My Account</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Order Tracking</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">All Products</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">All Services</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Service Detail</a>
+                </li>
+              </ul>
+            </div>
+            <div class="About">
+              <h5 class="text-capitalize mb-4">About us</h5>
+              <ul class="lh-lg">
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Our story</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Contacts</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Affiliate Program</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">Referral Program</a>
+                </li>
+                <li class="text-capitalize">
+                  <a class="fw500" href="#">careers</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footerbottom">
+          <p class="pt-2">CopyWrite @2023.Allright Reserved</p>
+        </div>
+      </footer>
+      <!-- footer ends  -->
+    </section>
+    <!--#################> Footer End <############### -->
+
+    <script src="./asset/js/swiper-bundle.min.js"></script>
+    <script src="./asset/js/script.js"></script>
+    <script src="./asset/js/gallary.js"></script>
+
+    <script>
+      const accordionItemHeaders = document.querySelectorAll(
+        ".accordion-item-header"
+      );
+
+      accordionItemHeaders.forEach((accordionItemHeader) => {
+        accordionItemHeader.addEventListener("click", (event) => {
+          // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+
+          const currentlyActiveAccordionItemHeader = document.querySelector(
+            ".accordion-item-header.active"
+          );
+          if (
+            currentlyActiveAccordionItemHeader &&
+            currentlyActiveAccordionItemHeader !== accordionItemHeader
+          ) {
+            currentlyActiveAccordionItemHeader.classList.toggle("active");
+            currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+          }
+          accordionItemHeader.classList.toggle("active");
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight =
+              accordionItemBody.scrollHeight + "px";
+          } else {
+            accordionItemBody.style.maxHeight = 0;
+          }
+        });
+      });
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--###############> AOS Animatoion End<###############  -->
+
+    <!-- <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+    <script>
+      var a,
+        b,
+        c,
+        submitContent,
+        captcha,
+        locked,
+        validSubmit = false,
+        timeoutHandle;
+
+      // Generating a simple sum (a + b) to make with a result (c)
+      function generateCaptcha() {
+        a = Math.ceil(Math.random() * 10);
+        b = Math.ceil(Math.random() * 10);
+        c = a + b;
+        submitContent =
+          "<span>" +
+          a +
+          "</span> + <span>" +
+          b +
+          "</span>" +
+          ' = <input class="submit__input" type="text" maxlength="2" size="2" required />';
+        $(".submit__generated").html(submitContent);
+
+        init();
+      }
+
+      // Check the value 'c' and the input value.
+      function checkCaptcha() {
+        if (captcha === c) {
+          // Pop the green valid icon
+          $(".submit__generated").removeClass("unvalid").addClass("valid");
+          $(".submit").removeClass("overlay");
+          $(".submit__overlay").fadeOut("fast");
+
+          validSubmit = true;
+        } else {
+          // Pop the red unvalid icon
+          $(".submit__generated").removeClass("valid").addClass("unvalid");
+          $(".submit").addClass("overlay");
+          $(".submit__overlay").fadeIn("fast");
+          validSubmit = false;
+        }
+        return validSubmit;
+      }
+
+      function unlock() {
+        locked = false;
+      }
+
+      // Refresh button click - Reset the captcha
+      $(".submit__control i.fa-refresh").on("click", function () {
+        if (!locked) {
+          locked = true;
+          setTimeout(unlock, 500);
+          generateCaptcha();
+          setTimeout(checkCaptcha, 0);
+        }
+      });
+
+      // init the action handlers - mostly useful when 'c' is refreshed
+      function init() {
+        $(".captchaform").on("submit", function (e) {
+          e.preventDefault();
+          if ($(".submit__generated").hasClass("valid")) {
+            // var formValues = [];
+            captcha = $(".submit__input").val();
+            if (captcha !== "") {
+              captcha = Number(captcha);
+            }
+
+            checkCaptcha();
+
+            if (validSubmit === true) {
+              validSubmit = false;
+              // Temporary direct 'success' simulation
+              submitted();
+            }
+          } else {
+            return false;
+          }
+        });
+
+        // Captcha input result handler
+        $(".submit__input").on(
+          "propertychange change keyup input paste",
+          function () {
+            // Prevent the execution on the first number of the string if it's a 'multiple number string'
+            // (i.e: execution on the '1' of '12')
+            window.clearTimeout(timeoutHandle);
+            timeoutHandle = window.setTimeout(function () {
+              captcha = $(".submit__input").val();
+              if (captcha !== "") {
+                captcha = Number(captcha);
+              }
+              checkCaptcha();
+            }, 150);
+          }
+        );
+
+        // Add the ':active' state CSS when 'enter' is pressed
+
+        // Refresh button click - Reset the captcha
+        $(".submit-control i.fa-refresh").on("click", function () {
+          if (!locked) {
+            locked = true;
+            setTimeout(unlock, 500);
+            generateCaptcha();
+            setTimeout(checkCaptcha, 0);
+          }
+        });
+
+        // Submit white overlay click
+        $(".submit-form-overlay").on("click", function () {
+          checkCaptcha();
+        });
+      }
+
+      generateCaptcha();
+    </script>
+    <script>
+      let mainImage = document.getElementById("main-Image");
+      let swipImage = document.querySelectorAll(".shadTwo");
+
+      swipImage.forEach((ele) => {
+        ele.onclick = () => {
+          console.log(ele.querySelector("img").src);
+          mainImage.src = ele.querySelector("img").src;
+        };
+      });
+    </script>
+  </body>
+</html>

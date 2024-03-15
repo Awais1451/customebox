@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Box Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./asset/css/style.css" />
+  <link rel="stylesheet" href="./asset/css/mainhome.css" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- F-Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./asset/css/test.css" />
+
+  <!--###############> AOS Animation Style Start <#################  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!--###############> AOS Animation Style End  <#################  -->
+
+  <!-- /*###########< New Asstes Start <############# */ -->
+  <link rel="stylesheet" href="./themes/demo-child/style8a54.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/base/elementor1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/base/gutenberg-blocks1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/base/slick-theme1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/base/slick1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/dokan/dokan1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/libs/jquery.scrollbar1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/libs/magnific-popup1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/libs/tooltipster.bundle.min1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/css/woocommerce/woocommerce1576.css">
+  <link rel="stylesheet" href="./themes/printec/assets/fonts/slick.eot">
+  <link rel="stylesheet" href="./themes/printec/assets/fonts/slick.svg">
+  <link rel="stylesheet" href="./themes/printec/assets/fonts/slick.ttf">
+  <link rel="stylesheet" href="./themes/printec/assets/fonts/slick.woff">
+  <link rel="stylesheet" href="./themes/printec/assets/fonts/slickd41d.eot">
+
+
+
+  <link rel="stylesheet" href="./themes/printec/style1576.css">
+
+
+
+  <!-- WP Css  -->
+
+
+  <link rel="stylesheet" href="./uploads/elementor/css/custom-frontend.min90b6.css">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+    .captchaform {
+      position: relative;
+      margin: 20px auto;
+      width: 300px;
+    }
+
+    .submit__generated {
+      display: inline-block;
+    }
+
+    .submit__generated span {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      vertical-align: center;
+      line-height: 35px;
+      font-weight: bold;
+      font-size: 16px;
+      color: White;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 1px solid white;
+      border-radius: 4px;
+    }
+
+    .submit__generated.valid:after,
+    .submit__generated.unvalid:after {
+      font-family: FontAwesome;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    .submit__generated.valid:after {
+      content: "\f00c";
+      color: #2ecc71;
+    }
+
+    .submit__generated.unvalid:after {
+      content: "\f00d";
+      color: #e74c3c;
+    }
+
+    .submit__generated.valid .submit__input {
+      border: 1px solid #2ecc71;
+      color: #2ecc71 !important;
+    }
+
+    .submit__generated.unvalid .submit__input {
+      border: 1px solid #e74c3c;
+      color: #e74c3c;
+    }
+
+    .submit__generated .submit__input {
+      position: relative;
+      outline: 0;
+      height: 35px;
+      width: 35px;
+      border-radius: 4px;
+      border: 1px solid #42a0dd;
+      color: #42a0dd;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      top: -2px;
+    }
+
+    .refreshcaptcha {
+      margin: 4px 0 0px 5px;
+      padding: 5px;
+      font-size: 18px;
+      color: White;
+      cursor: pointer;
+      transform-origin: center center;
+      transition: transform 0.2s ease-out, color 0.2s ease-out;
+    }
+
+    .refreshcaptcha:hover {
+      color: white;
+      transform: rotate(180deg);
+    }
+
+    .submit__error,
+    .submit__error--empty {
+      color: #e74c3c;
+      position: absolute;
+      margin-top: 0px;
+      margin-left: 100px;
+    }
+
+    .submit {
+      display: block;
+      margin: 50px 0;
+      padding: 7px 15px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      outline: none;
+      border: 0;
+      background-color: #42a0dd;
+      background-clip: padding-box;
+      border-radius: 3px;
+      box-shadow: 0 4px 0 #2c81ba;
+      opacity: 1;
+      transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    }
+
+    .submit:hover {
+      background-color: #3498db;
+    }
+
+    .submit:active,
+    .submit.enter-press,
+    .submit.overlay {
+      margin: 55px 0 46px 0;
+      box-shadow: none;
+    }
+
+    .submit__overlay {
+      height: 50px;
+      width: 110px;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      margin-top: -90px;
+      margin-left: -5px;
+    }
+
+    .low-opa {
+      opacity: 0.4;
+    }
+
+    .fadeOut {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .fadeIn {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+    }
+
+    /* new Csss */
+    .banr-section {
+      background-image: url(./asset/img/h5-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      /* height: 50vh !important; */
+      height: 50vh;
+      border-radius: 20px;
+    }
+
+    .btn-Bgtheme {
+      cursor: pointer;
+      padding: 15px 30px;
+      text-decoration: none;
+      text-shadow: none;
+      background-color: #7000fe;
+      border: none;
+      border-radius: 50px;
+      font-size: 15px;
+      color: white;
+    }
+
+    @media(max-width:1250px) {
+      .banr-section {
+        height: 120vh !important;
+      }
+    }
+
+    @media(max-width:786px) {
+      .banr-section {
+        height: 150vh !important;
+      }
+    }
+
+    .Specifications {
+      font-size: 15px;
+      color: #777777;
+      letter-spacing: 0.5px;
+    }
+
+    .customSize {
+      font-size: 15px;
+      color: #777777;
+      letter-spacing: 0.5px;
+    }
+
+    .Hrtags {
+      height: 2px;
+      background-color: #777777;
+      width: 100%;
+    }
+
+    .Discrip {
+      line-height: 2rem;
+    }
+
+    .fa-phone {
+      background-color: transparent !important;
+      color: white;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    /* Add your CSS styles here */
+    .content_section {
+      display: none;
+    }
+
+    .content_section.active {
+      display: block;
+    }
+
+
+    /* ###################nav bar CSS############## */
+    .searchInput input {
+
+      width: 100%;
+      outline: none;
+      border: none;
+
+      padding: 0 0px 0 20px;
+      font-size: 18px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+
+      width: 100%;
+      border: 1px solid #ccc;
+      padding: 8px;
+      border-radius: 30px;
+      width: 265px;
+    }
+
+    .searchInput input::placeholder {
+
+      font-size: 16px;
+    }
+
+
+
+    .searchInput .resultBox {
+      padding: 0;
+      opacity: 0;
+      pointer-events: none;
+      overflow-y: auto;
+      position: absolute;
+      /* Position the suggestion box absolutely */
+      top: 100%;
+      /* Position it below the input */
+      /* left: 0; */
+      z-index: 999;
+      /* Ensure it's above other content */
+      background-color: #fff;
+      /* Add background color */
+      width: 100%;
+      /* Set width to match the input */
+      border-radius: 0 0 5px 5px;
+      /* Match border radius of input */
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .searchInput.active .resultBox {
+      padding: 10px 8px;
+      opacity: 1;
+      width: 278px;
+      margin-top: 5px;
+      pointer-events: auto;
+    }
+
+    .resultBox li {
+      list-style: none;
+      padding: 8px 12px;
+      display: none;
+      width: 100%;
+      cursor: default;
+      border-radius: 3px;
+    }
+
+    .searchInput.active .resultBox li {
+      display: block;
+    }
+
+    .resultBox li:hover {
+      background: #efefef;
+    }
+
+    .searchInput .icon {
+      position: absolute;
+      right: 0px;
+      top: -4px;
+      /* height: 55px; */
+      width: 55px;
+      text-align: center;
+      line-height: 55px;
+      font-size: 14px;
+      color: #888;
+
+      cursor: pointer;
+    }
+
+    .sugestionsearch {
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+
+    }
+
+    .sugestionsearch:hover {
+      cursor: pointer;
+    }
+
+    .sugestionsearch span {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+
+      color: #125DFC;
+    }
+
+    .sugestionsearch img {
+      width: 100px;
+    }
+
+
+
+
+
+    .nav-bg.sticky {
+      position: fixed;
+      top: 0;
+      left: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+      z-index: 1000;
+      /* Adjust z-index as needed */
+
+    }
+
+    .logo {
+
+
+      display: inline-block;
+      transition: all 0.3s ease;
+      /* Add transition for smooth effect */
+    }
+
+    .sticklogo img {
+      display: none;
+    }
+
+
+
+    .fa-message {
+      background-color: #125DFC !important;
+      color: white;
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .Main-container{
+      background-image: url('./asset/img/global_bc.jpg');
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 100% 100%;
+      height: 30vh;
+     
+    }
+    @media(max-width:600px){
+      .content_section{
+        padding-inline: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--#################> Main Home Page Start<############# -->
+
+  <!-- ----------Navbar------------------------->
+  <div class="col-full container-xxl py-2">
+    <div class="row p-0 m-0">
+      <div class="col-lg-3 p-0">
+        <a href class="logo d-none d-lg-block"><img src="./asset/img/logo.png" class="mb-2" alt width="150px" /></a>
+      </div>
+      <div class="col-lg-6 p-0 m-0">
+        <div class="d-flex justify-content-around pt-2">
+          <div>
+            <a href class="text-decoration-none">
+              <i class="fa-regular fa-message"></i>
+              <span class="contact-txt ms-sm-2 text-nowrap">(510) 500-9533</span>
+            </a>
+          </div>
+          <div>
+            <a href class="text-decoration-none">
+              <i class="fa-solid fa-phone ms-sm-3"></i>
+              <span class="contact-txt ms-sm-2 text-nowrap">sales@oxopackaging.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 pt-1 d-flex d-none d-lg-flex justify-content-end">
+        <button class="nav-btn">Login</button>
+        <button class="nav-btn2 ms-3">Signup</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="nav-bg">
+    <div class="container">
+      <div class="row p-0 m-0">
+        <nav class="navbar navbar-expand-lg nav-bg">
+          <div class="container-xxl d-flex justify-content-between">
+            <a href class="logo  sticklogo"><img src="./asset/img/logo.png" class="mb-2" alt width="150px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample">
+              <span class="navbar-toggler-icon toggle-clr"></span>
+            </button>
+            <div class="collapse navbar-collapse navv" id="navbarSupportedContent">
+              <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-2">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown me-2" id="BoxByIndus">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Boxes by Industry
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown me-2" id="BoxByStylematerail">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Boxes by Material
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li id="BoxByStyle" class="nav-item dropdown me-2">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Boxes by Style
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="RequestQuate.html">Request a Quote</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Blog</a>
+                </li>
+              </ul>
+              <!-- <div class="searchbar my-1">
+                <input class="search_input" type="text" name placeholder="Search Product" />
+                <i class="fas fa-search search_icon"></i>
+              </div> -->
+              <div class="searchbar">
+
+
+                <div class="searchInput">
+                  <input type="text" placeholder="Search Product">
+                  <div class="resultBox">
+                    <!-- here list are inserted from javascript -->
+                  </div>
+                  <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+
+              </div>
+
+              <div>
+                <div class="col-md-3 d-flex d-sm-block d-lg-none">
+                  <button class="nav-btn mb-3">Login</button>
+                  <button class="nav-btn2 ms-1">Signup</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav navv1 me-auto mb-2 mb-lg-0">
+        <li class="nav-item me-3">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Boxes by Industry
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Boxes by Material
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Boxes by Style
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="RequestQuate.html">Request a Quote</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Blog</a>
+        </li>
+      </ul>
+      <div class="searchbar mb-3">
+        <input class="search_input w-100" type="text" name placeholder="Search Product" />
+        <i class="fas fa-search search_icon"></i>
+      </div>
+
+      <div>
+        <div class="col-md-12 d-flex d-sm-block d-lg-none">
+          <button class="nav-btnoff mb-3 w-100">Login</button>
+          <button class="nav-btn2off mb-3 ms-1">Signup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--################> OffCanva End<################# -->
+  <!--################> OffCanva End<################# -->
+
+<!--###############> Crousel Start <################# -->
+<!-- 
+  <div class="maincustoomhome">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active slider-img">
+          <section class="bg-banner">
+            <div class="container">
+              <div class="row p-0 m-0 p-3">
+                <div class="col-lg-5 col-md-6">
+                  <div class="Left-col">
+                    <p class="para-txt text-white pt-5 pt-6">CUSTOM BOXES</p>
+                    <p class="CS-TXT text-capitalize">
+                      Customized bulk paper bags
+                    </p>
+                    <p class="para-txt text-capitalize">
+                      Turn your ideas into premium products that leave a
+                      lasting impression
+                    </p>
+                    <div class>
+                      <button class="btn btn-lg sec2_custom-button mt-2">
+                        Shop Now<i class="fa-solid fa-arrow-right sec2_custom_icon ms-1"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-md-6 d-none d-md-block animatedingbox">
+                  <img src="./asset/img/image_11-removebg-preview 1.png" class="pt-5 w-100" alt />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="carousel-item pb-5 pb-md-0">
+          <div class="slider-img secondcarousel">
+            <img src="./asset/img/7xm.xyz169494.jpg" class="d-block w-100 img-slid" alt="..." />
+          </div>
+          <div class="custom-carousel-caption">
+            <p class="fst-italic">Custom Boxes</p>
+            <h3 class="CS-TXT mb-5 ms-4">Customized bulk paper bags</h3>
+            <div class="row p-0 m-0">
+              <div class="col-lg-1"></div>
+              <div class="col-lg-5">
+                <button class="btn w-100 btn-lg sec2_custom-button1 mt-2 px-5 py-3 text-nowrap">
+                  Shop Now
+                </button>
+              </div>
+              <div class="col-lg-5">
+                <button class="btn w-100 btn-lg sec2_custom-button2 mt-2 px-5 py-3 text-nowrap">
+                  Shop Now
+                </button>
+              </div>
+              <div class="col-lg-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class aria-hidden="true"></span>
+        
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!--###############> Crousel End <################# -->
+<!-- 
+    <section class="bg-transparent masterlightsection">
+      <div class="container">
+        <div class="row p-0 m-0">
+          <div class="col-md-4 mb-3 mb-md-0 p-0 p-md-1">
+            <div class="bg-white boxeshome">
+              <div class="d-flex p-3 mb-md-0 mb-5">
+                <div>
+                  <img src="./asset/img/Group 14.png" alt width="54px" />
+                </div>
+                <div class="ms-3">
+                  <p class="mb-0 banner-para">Free Shipping & Return</p>
+                  <p class="mb-0">Free Shipping on orders over $199</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0 p-0 p-md-1">
+            <div class="bg-white boxeshome">
+              <div class="d-flex p-3 mb-md-0 mb-5">
+                <div>
+                  <img src="./asset/img/Group 14.png" alt width="54px" />
+                </div>
+                <div class="ms-3">
+                  <p class="mb-0 banner-para">Free Shipping & Return</p>
+                  <p class="mb-0">Free Shipping on orders over $199</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0 p-0 p-md-1">
+            <div class="bg-white boxeshome">
+              <div class="d-flex p-3">
+                <div>
+                  <img src="./asset/img/Group 14.png" alt width="54px" />
+                </div>
+                <div class="ms-3">
+                  <p class="mb-0 banner-para">Free Shipping & Return</p>
+                  <p class="mb-0">Free Shipping on orders over $199</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+
+  
+  <!-- ############new section ##############-->
+
+  
+<section>
+  <div class="Main-container d-flex justify-content-center align-items-center">
+    <nav class=" " style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item fs-6 "><a href="#">HomePage</a></li>
+        <li class="breadcrumb-item fs-6  active" aria-current="page">Category</li>
+      </ol>
+    </nav>
+    
+  </div>
+</section>
+  <!-- new section start -->
+  <section class="py-3 pt-4 ">
+    <div class="col-full ">
+      <h2 class="text-center py-2 ">Our Product</h2>
+      <div class="woocommerce"></div>
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+          <ul class="printec-products products columns-4">
+            <li
+              class="product-style-default service-product product type-product post-7294 status-publish first instock product_cat-design-online product_tag-badge product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Badge</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7229 status-publish instock product_cat-business-cards product_cat-design-online product_tag-business-card product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg  "
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a
+                      href="https://demo2.pavothemes.com/printec/shop/business-card/">Business card</a></h3>
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-6968 status-publish instock product_cat-design-online product_tag-cap product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Cap</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7239 status-publish last instock product_cat-design-online product_tag-design-online product_tag-flyer has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Flyer</a></h3>
+
+                </div>
+              </div>
+            </li>
+           
+
+          </ul>
+
+        </main>
+      </div>
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+          <ul class="printec-products products columns-4">
+            <li
+              class="product-style-default service-product product type-product post-7294 status-publish first instock product_cat-design-online product_tag-badge product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Badge</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7229 status-publish instock product_cat-business-cards product_cat-design-online product_tag-business-card product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg  "
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a
+                      href="https://demo2.pavothemes.com/printec/shop/business-card/">Business card</a></h3>
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-6968 status-publish instock product_cat-design-online product_tag-cap product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Cap</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7239 status-publish last instock product_cat-design-online product_tag-design-online product_tag-flyer has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Flyer</a></h3>
+
+                </div>
+              </div>
+            </li>
+           
+
+          </ul>
+
+        </main>
+      </div>
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+          <ul class="printec-products products columns-4">
+            <li
+              class="product-style-default service-product product type-product post-7294 status-publish first instock product_cat-design-online product_tag-badge product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Badge</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7229 status-publish instock product_cat-business-cards product_cat-design-online product_tag-business-card product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg  "
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a
+                      href="https://demo2.pavothemes.com/printec/shop/business-card/">Business card</a></h3>
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-6968 status-publish instock product_cat-design-online product_tag-cap product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Cap</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7239 status-publish last instock product_cat-design-online product_tag-design-online product_tag-flyer has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Flyer</a></h3>
+
+                </div>
+              </div>
+            </li>
+           
+
+          </ul>
+
+        </main>
+      </div>
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+          <ul class="printec-products products columns-4">
+            <li
+              class="product-style-default service-product product type-product post-7294 status-publish first instock product_cat-design-online product_tag-badge product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Badge</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7229 status-publish instock product_cat-business-cards product_cat-design-online product_tag-business-card product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg  "
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a
+                      href="https://demo2.pavothemes.com/printec/shop/business-card/">Business card</a></h3>
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-6968 status-publish instock product_cat-design-online product_tag-cap product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Cap</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7239 status-publish last instock product_cat-design-online product_tag-design-online product_tag-flyer has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Flyer</a></h3>
+
+                </div>
+              </div>
+            </li>
+           
+
+          </ul>
+
+        </main>
+      </div>
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+          <ul class="printec-products products columns-4">
+            <li
+              class="product-style-default service-product product type-product post-7294 status-publish first instock product_cat-design-online product_tag-badge product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_16-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Badge</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7229 status-publish instock product_cat-business-cards product_cat-design-online product_tag-business-card product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_19-600x600.jpg  "
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a
+                      href="https://demo2.pavothemes.com/printec/shop/business-card/">Business card</a></h3>
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-6968 status-publish instock product_cat-design-online product_tag-cap product_tag-design-online has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_28-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Cap</a></h3>
+
+
+                </div>
+              </div>
+            </li>
+            <li
+              class="product-style-default service-product product type-product post-7239 status-publish last instock product_cat-design-online product_tag-design-online product_tag-flyer has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+              <div class="product-block">
+                <div class="content-product-imagin" style="margin-bottom: -10px;"></div>
+                <div class="product-transition">
+                  <div class="product-image image-main"><img width="600" height="600"
+                      src="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async"
+                      loading="lazy"
+                      srcset="	https://demo2.pavothemes.com/printec/wp-content/uploads/2023/02/product_13-600x600.jpg 600w"
+                      sizes="(max-width: 600px) 100vw, 600px"></div>
+
+                  <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> </a>
+                </div>
+                <div class="product-caption">
+                  <h3 class="woocommerce-loop-product__title"><a href="">Flyer</a></h3>
+
+                </div>
+              </div>
+            </li>
+           
+
+          </ul>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- new section end -->
+  <!-- ############new section ##############-->
+  <!--====== Gallery Section  Start ======-->
+  <section id="gallery" class="pb-5 px-2  px-md-5">
+    <div class=" col-full">
+
+      <div class="container-fluid p-0 px-md-4">
+        <!-- Filterable Gallery -->
+        <div class="row p-0 m-0">
+          <div class="col-md-2"></div>
+          <div class="col-md-8 p-0 m-0">
+            <ul class="gallery_tabs">
+
+              <li data-filter="camera" class="active ">Specification</li>
+              <li data-filter="laptop">Packing Material</li>
+              <li data-filter="mobile">Description</li>
+
+            </ul>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+        <section class="pt-3  content_section active camera ">
+          <div class="contain ">
+            <div class="row  ">
+              <div class="   col-5">
+                <p class="Specifications">DIMENSIONS</p>
+              </div>
+              <div class="col-7  ">
+                <p class="customSize">All Custom Sizes & Shapes </p>
+              </div>
+              <hr class="Hrtags">
+            </div>
+            <div class="row ">
+              <div class=" col-5">
+                <p class="Specifications">PRINTING</p>
+              </div>
+              <div class="col-7 ">
+                <p class="customSize">CMYK, PMS, No Printing </p>
+              </div>
+              <hr class="Hrtags">
+            </div>
+            <div class="row ">
+              <div class=" col-5">
+                <p class="Specifications">PAPER STOCK</p>
+              </div>
+              <div class="col-7">
+                <p class="customSize">10pt to 28pt (60lb to 400lb) Eco-Friendly Kraft, E-flute Corrugated, Bux Board,
+                  Cardstock
+
+                </p>
+              </div>
+              <hr class="Hrtags">
+            </div>
+            <div class="row ">
+              <div class=" col-5">
+                <p class="Specifications">QUANTITIES</p>
+              </div>
+              <div class="col-7">
+                <p class="customSize">100 – 500,000 </p>
+              </div>
+              <hr class="Hrtags">
+            </div>
+            <div class="row ">
+              <div class=" col-5">
+                <p class="Specifications">COATING</p>
+              </div>
+              <div class="col-7">
+                <p class="customSize">Gloss, Matte, Spot UV</p>
+              </div>
+              <hr class="Hrtags">
+            </div>
+            <div class="row camera">
+              <div class=" col-5">
+                <p class="Specifications">OPTIONS</p>
+              </div>
+              <div class="col-7">
+                <p class="customSize">Custom Window Cut Out, Gold/Silver Foiling, Embossing, Raised Ink, PVC Sheet.
+                  s </p>
+              </div>
+              <hr class="Hrtags">
+            </div>
+          </div>
+        </section>
+
+        <section class="py-3 content_section mobile">
+          <div class="">
+            <h2 class="fs-3 Discrip ">How Can I Find Printing Services Near Me?
+            </h2>
+            <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nisi explicabo
+              necessitatibus eligendi enim porro cumque facilis tempora possimus mollitia? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos magnam reiciendis, aut nisi molestias eaque ipsam quam quasi quas eos.
+            </p>
+          </div>
+          <div class=" ">
+            <h2 class="fs-3 Discrip">Business Cards Online Printing
+            </h2>
+            <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nisi explicabo
+              necessitatibus eligendi enim porro cumque facilis tempora possimus mollitia? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos magnam reiciendis, aut nisi molestias eaque ipsam quam quasi quas eos.
+            </p>
+          </div>
+          <div class="">
+            <h2 class="fs-3 Discrip">Custom Stickers and Labels Printing
+
+            </h2>
+            <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nisi explicabo
+              necessitatibus eligendi enim porro cumque facilis tempora possimus mollitia? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos magnam reiciendis, aut nisi molestias eaque ipsam quam quasi quas eos.
+            </p>
+          </div>
+          <div class="">
+            <h2 class="fs-3 Discrip">Custom Flyers and Brochures Printing </h2>
+            <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nisi explicabo
+              necessitatibus eligendi enim porro cumque facilis tempora possimus mollitia? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quos magnam reiciendis, aut nisi molestias eaque ipsam quam quasi quas eos.
+            </p>
+          </div>
+        </section>
+
+        <section class="laptop content_section pt-3 ">
+          <div class="row">
+            <div class="col-md-3  col-6">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/SBS-C1S.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+            <div class="col-md-3   col-6">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/SBS-C1S.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+            <div class="col-md-3  col-6">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/CCNB.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+            <div class="col-md-3  col-6">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/Natural-Brown-Kraft.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-3   col-6">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/Metallic-Paper.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+            <div class="col-md-3   col-6">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/Uncoated-Unbleached-Kraft-UUK.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+            <div class="col-md-3   col-6">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/CCNB.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 ">
+              <div class="d-flex flex-column justify-content-center align-items-center  ">
+                <img class=" w-50 py-2 " src="./asset/img/Black-Kraft.webp" alt="">
+                <h2 class="py-2 fs-4  ">SBS C1S</h2>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox">
+          <div class="lightbox_wrapper">
+            <div class="lightbox_content">
+              <img src class="lightbox_img" alt="lightbox-img" />
+            </div>
+          </div>
+          <div class="lightbox_close">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--====== Gallery Section  End ======-->
+    <!-- banner section  -->
+    <section class="Banersection col-full " style="padding-inline: 24.5px;">
+      <div class=" banr-section d-flex ">
+        <div class="row px-2  ">
+          <div class="col-md-6 d-flex justify-content-center align-items-center ">
+  
+            <img class="w-25 " src="./asset/img/letter-1.png" alt="">
+            <h2 class="text-center text-white fs-md-2 pt-5  ">Sign up for exclusive offers from us</h2>
+  
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-center ">
+            <p class="text-white  fs-6 text-center  ">Sign up to your newsletter for all the latest news and our villa
+              exclusives promotion.</p>
+            <div class="d-flex justify-content-center ">
+              <button type="submit" value="Submit" class="btn-Bgtheme  btn-theme">
+                <span>subscribe</span>
+                <i aria-hidden="true" class="printec-icon- printec-icon-right-arrow"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!--#################> Footer Start <############### -->
+  <section class="position-relative">
+    <!-- footerTop starts  -->
+    <div class="container-sm footerTop px-2 px-md-4 py-3 row">
+      <div class="location d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1">
+        <div class="locationIcon d-flex justify-content-center align-items-center">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="locationText mt-1 ms-3">
+          <span class="text-uppercase">Our Location</span>
+          <br />
+          <small>90 State Street, Albany</small>
+        </div>
+      </div>
+
+      <div class="call d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1">
+        <div class="callIcon d-flex justify-content-center align-items-center mt-1">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="callText mt-1 ms-3">
+          <span class="text-uppercase">Call Us</span> <br />
+          <small>315 210 8020</small>
+        </div>
+      </div>
+
+      <div class="whatsapp d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1">
+        <div class="whatsappIcon d-flex justify-content-center align-items-center mt-1">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="whatsappText mt-1 ms-3">
+          <span class="text-uppercase">whatsapp</span> <br />
+          <small>716 815 6064 </small>
+        </div>
+      </div>
+      <div class="email d-flex col-12 col-sm-6 col-md-4 col-lg-3 mt-3 p-0 p-md-1">
+        <div class="emailIcon d-flex justify-content-center align-items-center">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="emailText mt-1 ms-3">
+          <span class="text-uppercase">email us</span> <br />
+          <small>sales@ibexpackaging.com </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- footerTop ends  -->
+
+    <!-- footer starts  -->
+    <footer class="footer mt-5 container-fluid">
+      <div class="footerContent row mx-md-2 d-flex flex-wrap">
+        <!-- Footer Info -->
+        <div class="footerInfo col-12 col-md-6 col-lg-3 d-flex flex-column gap-4 mb-4 align-items-start">
+          <div class="footerInfoLogo">
+            <img src="./asset/img/Logo.svg" alt="Logo" />
+          </div>
+          <div class="footerInfoText">
+            <p class="ftext text-start text-md-start">
+              Distrusts delighted Excuse few the remain highly feebly add
+              people manner say. It high at my mind by roof.
+            </p>
+          </div>
+          <div class="footerInfoSmlinks d-flex gap-2">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+            <div><i class="fa-brands fa-twitter mt-1"></i></div>
+            <div><i class="fa-brands fa-instagram mt-1"></i></div>
+            <div><i class="fa-brands fa-pinterest mt-1"></i></div>
+          </div>
+        </div>
+
+        <!-- Footer Contact -->
+        <div
+          class="footerContact col-12 col-md-6 col-lg-3 justify-content-center align-items-start d-flex mb3 flex-column">
+          <h5 class="text-capitalize mb-4">get in touch</h5>
+          <p class="ftext m-0 lh-lg text-start">
+            2972 Westheimer Rd. Santa Ana, Illinois 85486 <br />
+            support@example.com
+          </p>
+          <br />
+          <h5 class="fw500 ftext cn">+ (406) 555-0120</h5>
+        </div>
+
+        <!-- Footer Links -->
+        <div
+          class="footerLinks col-12 col-md-12 col-lg-6 m-0 d-flex justify-content-between pe-5 flex-column flex-md-row align-items-start mt-4">
+          <div class="Info">
+            <h5 class="text-capitalize mb-4">information</h5>
+            <ul class="lh-lg">
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Help center</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">shipping</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">returns</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">policies</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">gift cards</a>
+              </li>
+            </ul>
+          </div>
+          <div class="Usefull">
+            <h5 class="text-capitalize mb-4">Useful links</h5>
+            <ul class="lh-lg">
+              <li class="text-capitalize">
+                <a class="fw500" href="#">My Account</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Order Tracking</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">All Products</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">All Services</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Service Detail</a>
+              </li>
+            </ul>
+          </div>
+          <div class="About">
+            <h5 class="text-capitalize mb-4">About us</h5>
+            <ul class="lh-lg">
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Our story</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Contacts</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Affiliate Program</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">Referral Program</a>
+              </li>
+              <li class="text-capitalize">
+                <a class="fw500" href="#">careers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footerbottom">
+        <p class="pt-2">CopyWrite @2023.Allright Reserved</p>
+      </div>
+    </footer>
+    <!-- footer ends  -->
+  </section>
+  <!--#################> Footer End <############### -->
+
+  <script src="./asset/js/swiper-bundle.min.js"></script>
+  <script src="./asset/js/script.js"></script>
+  <script src="./asset/js/gallary.js"></script>
+
+  <script>
+    const accordionItemHeaders = document.querySelectorAll(
+      ".accordion-item-header"
+    );
+
+    accordionItemHeaders.forEach((accordionItemHeader) => {
+      accordionItemHeader.addEventListener("click", (event) => {
+        // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
+
+        const currentlyActiveAccordionItemHeader = document.querySelector(
+          ".accordion-item-header.active"
+        );
+        if (
+          currentlyActiveAccordionItemHeader &&
+          currentlyActiveAccordionItemHeader !== accordionItemHeader
+        ) {
+          currentlyActiveAccordionItemHeader.classList.toggle("active");
+          currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+        }
+        accordionItemHeader.classList.toggle("active");
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+        if (accordionItemHeader.classList.contains("active")) {
+          accordionItemBody.style.maxHeight =
+            accordionItemBody.scrollHeight + "px";
+        } else {
+          accordionItemBody.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!--###############> AOS Animatoion End<###############  -->
+
+  <!-- <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+  <script>
+    var a,
+      b,
+      c,
+      submitContent,
+      captcha,
+      locked,
+      validSubmit = false,
+      timeoutHandle;
+
+    // Generating a simple sum (a + b) to make with a result (c)
+    function generateCaptcha() {
+      a = Math.ceil(Math.random() * 10);
+      b = Math.ceil(Math.random() * 10);
+      c = a + b;
+      submitContent =
+        "<span>" +
+        a +
+        "</span> + <span>" +
+        b +
+        "</span>" +
+        ' = <input class="submit__input" type="text" maxlength="2" size="2" required />';
+      $(".submit__generated").html(submitContent);
+
+      init();
+    }
+
+    // Check the value 'c' and the input value.
+    function checkCaptcha() {
+      if (captcha === c) {
+        // Pop the green valid icon
+        $(".submit__generated").removeClass("unvalid").addClass("valid");
+        $(".submit").removeClass("overlay");
+        $(".submit__overlay").fadeOut("fast");
+
+        validSubmit = true;
+      } else {
+        // Pop the red unvalid icon
+        $(".submit__generated").removeClass("valid").addClass("unvalid");
+        $(".submit").addClass("overlay");
+        $(".submit__overlay").fadeIn("fast");
+        validSubmit = false;
+      }
+      return validSubmit;
+    }
+
+    function unlock() {
+      locked = false;
+    }
+
+    // Refresh button click - Reset the captcha
+    $(".submit__control i.fa-refresh").on("click", function () {
+      if (!locked) {
+        locked = true;
+        setTimeout(unlock, 500);
+        generateCaptcha();
+        setTimeout(checkCaptcha, 0);
+      }
+    });
+
+    // init the action handlers - mostly useful when 'c' is refreshed
+    function init() {
+      $(".captchaform").on("submit", function (e) {
+        e.preventDefault();
+        if ($(".submit__generated").hasClass("valid")) {
+          // var formValues = [];
+          captcha = $(".submit__input").val();
+          if (captcha !== "") {
+            captcha = Number(captcha);
+          }
+
+          checkCaptcha();
+
+          if (validSubmit === true) {
+            validSubmit = false;
+            // Temporary direct 'success' simulation
+            submitted();
+          }
+        } else {
+          return false;
+        }
+      });
+
+      // Captcha input result handler
+      $(".submit__input").on(
+        "propertychange change keyup input paste",
+        function () {
+          // Prevent the execution on the first number of the string if it's a 'multiple number string'
+          // (i.e: execution on the '1' of '12')
+          window.clearTimeout(timeoutHandle);
+          timeoutHandle = window.setTimeout(function () {
+            captcha = $(".submit__input").val();
+            if (captcha !== "") {
+              captcha = Number(captcha);
+            }
+            checkCaptcha();
+          }, 150);
+        }
+      );
+
+      // Add the ':active' state CSS when 'enter' is pressed
+
+      // Refresh button click - Reset the captcha
+      $(".submit-control i.fa-refresh").on("click", function () {
+        if (!locked) {
+          locked = true;
+          setTimeout(unlock, 500);
+          generateCaptcha();
+          setTimeout(checkCaptcha, 0);
+        }
+      });
+
+      // Submit white overlay click
+      $(".submit-form-overlay").on("click", function () {
+        checkCaptcha();
+      });
+    }
+
+    generateCaptcha();
+  </script>
+  <script>
+    // JavaScript for filtering gallery items
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll('.gallery_tabs li');
+      const sections = document.querySelectorAll('.content_section');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          tabs.forEach(tab => tab.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+          sections.forEach(section => {
+            section.classList.remove('active');
+            if (section.classList.contains(filter)) {
+              section.classList.add('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) { // Adjust the scroll value as needed
+        $('.navbar').addClass('sticky');
+        $('.sticklogo img').css('display', 'block'); // Adjust the logo size when navbar becomes sticky
+      } else {
+        $('.navbar').removeClass('sticky');
+        $('.sticklogo img').css('display', 'none'); // Reset logo size when navbar is not sticky
+      }
+    });
+
+  </script>
+
+<script>
+  let suggestions = [
+    "Channel",
+    "CodingLab",
+    "CodingNepal",
+    "YouTube",
+    "YouTuber",
+    "YouTube Channel",
+    "Blogger",
+    "Bollywood",
+    "Vlogger",
+    "Vechiles",
+    "Facebook",
+    "Freelancer",
+    "Facebook Page",
+    "Designer",
+    "Developer",
+    "Web Designer",
+    "Web Developer",
+    "Login Form in HTML & CSS",
+    "How to learn HTML & CSS",
+    "How to learn JavaScript",
+    "How to became Freelancer",
+    "How to became Web Designer",
+    "How to start Gaming Channel",
+    "How to start YouTube Channel",
+    "What does HTML stands for?",
+    "What does CSS stands for?",
+  ];
+
+  // getting all required elements
+  const searchInput = document.querySelector(".searchInput");
+  const input = searchInput.querySelector("input");
+  const resultBox = searchInput.querySelector(".resultBox");
+  const icon = searchInput.querySelector(".icon");
+  let linkTag = searchInput.querySelector("a");
+  let webLink;
+
+  // if user press any key and release
+  input.onkeyup = (e) => {
+    let userData = e.target.value; //user enetered data
+    let emptyArray = [];
+    if (userData) {
+      emptyArray = suggestions.filter((data) => {
+        //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+        return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+      });
+      emptyArray = emptyArray.map((data) => {
+        // passing return data inside li tag
+        return data = '<li class="sugestionsearch">'
+          + '<img src="./asset/img/7xm.xyz181976.jpg"/><span class=""> Shirt Design</span> ' +
+
+          '</li>';
+      });
+      searchInput.classList.add("active"); //show autocomplete box
+      showSuggestions(emptyArray);
+      let allList = resultBox.querySelectorAll("li");
+      for (let i = 0; i < allList.length; i++) {
+        //adding onclick attribute in all li tag
+        allList[i].setAttribute("onclick", "select(this)");
+      }
+    } else {
+      searchInput.classList.remove("active"); //hide autocomplete box
+    }
+  }
+
+  function showSuggestions(list) {
+    let listData;
+    if (!list.length) {
+      userValue = inputBox.value;
+      listData = '<li>' + userValue + '</li>';
+    } else {
+      listData = list.join('');
+    }
+    resultBox.innerHTML = listData;
+  }
+</script>
+</body>
+
+</html>

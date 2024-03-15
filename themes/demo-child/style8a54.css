@@ -1,0 +1,197 @@
+.home-free .logo-free {
+    position: absolute;
+    top: -24px;
+    left: 35px
+}
+
+.home-free .logo-free svg {
+    width: 78px !important
+}
+
+.home-free .hfe-site-logo-container {
+    position: relative
+}
+
+.elementor-widget-site-logo.icon-logo-theme-printec .hfe-site-logo-container {
+    position: relative
+}
+
+.elementor-widget-site-logo.icon-logo-theme-printec .hfe-site-logo-container:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -8px;
+    bottom: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary)
+}
+
+.elementor-widget-site-logo.icon-logo-theme-printec.white .hfe-site-logo-container {
+    position: relative
+}
+
+.elementor-widget-site-logo.icon-logo-theme-printec.white .hfe-site-logo-container:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -8px;
+    bottom: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff
+}
+
+#rev_slider_1_1_wrapper .arrows1.tparrows {
+    cursor: pointer;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    border-radius: 50%;
+    border: 2px solid #eaeaea
+}
+
+#rev_slider_1_1_wrapper .arrows1.tparrows:hover {
+    background: transparent;
+    border: 2px solid #ecca7e
+}
+
+#rev_slider_1_1_wrapper .arrows1.tparrows:before {
+    font-family: revicons;
+    font-size: 16px;
+    display: block;
+    line-height: 48px;
+    color: #fff;
+    text-align: center
+}
+
+#rev_slider_1_1_wrapper .arrows1.tparrows:hover:before {
+    color: #ecca7e
+}
+
+#rev_slider_1_1_wrapper .arrows1.tparrows.tp-leftarrow:before {
+    content: '\e824'
+}
+
+#rev_slider_1_1_wrapper .arrows1.tparrows.tp-rightarrow:before {
+    content: '\e825'
+}
+
+#rev_slider_2_1_wrapper .arrows1.tparrows {
+    cursor: pointer;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    border-radius: 50%;
+    border: 2px solid #eaeaea
+}
+
+#rev_slider_2_1_wrapper .arrows1.tparrows:hover {
+    background: transparent;
+    border: 2px solid #ecca7e
+}
+
+#rev_slider_2_1_wrapper .arrows1.tparrows:before {
+    font-family: revicons;
+    font-size: 16px;
+    display: block;
+    line-height: 48px;
+    color: #fff;
+    text-align: center
+}
+
+#rev_slider_2_1_wrapper .arrows1.tparrows:hover:before {
+    color: #ecca7e
+}
+
+#rev_slider_2_1_wrapper .arrows1.tparrows.tp-leftarrow:before {
+    content: '\e824'
+}
+
+#rev_slider_2_1_wrapper .arrows1.tparrows.tp-rightarrow:before {
+    content: '\e825'
+}
+
+#rev_slider_4_1_wrapper .arrows1.tparrows {
+    cursor: pointer;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    border-radius: 50%;
+    border: 2px solid #eaeaea
+}
+
+#rev_slider_4_1_wrapper .arrows1.tparrows:hover {
+    background: transparent;
+    border: 2px solid #ecca7e
+}
+
+#rev_slider_4_1_wrapper .arrows1.tparrows:before {
+    font-family: revicons;
+    font-size: 16px;
+    display: block;
+    line-height: 48px;
+    color: #fff;
+    text-align: center
+}
+
+#rev_slider_4_1_wrapper .arrows1.tparrows:hover:before {
+    color: #ecca7e
+}
+
+#rev_slider_4_1_wrapper .arrows1.tparrows.tp-leftarrow:before {
+    content: '\e824'
+}
+
+#rev_slider_4_1_wrapper .arrows1.tparrows.tp-rightarrow:before {
+    content: '\e825'
+}
+
+#rev_slider_6_1_wrapper .arrows1.tparrows {
+    cursor: pointer;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    border-radius: 50%;
+    border: 2px solid #eaeaea
+}
+
+#rev_slider_6_1_wrapper .arrows1.tparrows:hover {
+    background: transparent;
+    border: 2px solid #ecca7e
+}
+
+#rev_slider_6_1_wrapper .arrows1.tparrows:before {
+    font-family: revicons;
+    font-size: 16px;
+    display: block;
+    line-height: 48px;
+    color: #fff;
+    text-align: center
+}
+
+#rev_slider_6_1_wrapper .arrows1.tparrows:hover:before {
+    color: #ecca7e
+}
+
+#rev_slider_6_1_wrapper .arrows1.tparrows.tp-leftarrow:before {
+    content: '\e824'
+}
+
+#rev_slider_6_1_wrapper .arrows1.tparrows.tp-rightarrow:before {
+    content: '\e825'
+}
