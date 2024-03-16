@@ -201,7 +201,7 @@ border-radius: 8px;
         z-index: 1;
     }  
 .navbar-toggler{
-    background-color: white;
+    background-color: white !important;
 }
 .img-slid{
     height: 75vh;

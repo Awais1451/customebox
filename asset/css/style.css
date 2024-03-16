@@ -1566,7 +1566,7 @@ li a:hover {
   margin: auto;
 }
 .offcanvas{
-  z-index: 99999999;
+  z-index: 99999999 !important;
 }
 .w95{
   width: 95% !important;
